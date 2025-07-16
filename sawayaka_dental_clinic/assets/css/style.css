@@ -1,0 +1,381 @@
+/* PC・スマホ共通スタイル */
+* {
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  /* 1rem = 16px  1rem=10px*/
+}
+
+body {
+  max-width: 1440px;
+  font-family: "Noto Sans JP", serif;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+
+  /* header */
+.header {
+  height: 100vh;
+  background: #E9DFC3;
+  border-radius: 2px;
+  float: right;
+  right: 0px;
+  transition: 0.5s;
+  font-size: 1.6rem;
+  position: fixed;
+}
+
+.nav {
+  margin: 0 auto;
+
+
+}
+
+.nav-inner {
+  text-align: center;
+}
+
+.nav-inner-menu img{
+  margin-top: 0;
+  width: 70%;
+}
+
+.nav-inner-menu-reservation img{
+  margin-top: 36px;
+  width: 90%;
+}
+
+.nav-inner-access img{
+  margin-top: 36px;
+  width: 90%;
+}
+
+.nav-inner-TOP img{
+  margin-top: 36px;
+  width: 90%;
+}
+
+/* メインビジュアル */
+.main {
+  position: relative;
+}
+
+.main-visual  {
+  width: 100%;
+}
+
+.carousel-section {
+  width: 100%;
+  transition: width 0.3s ease; /* スムーズな変化 */
+}
+
+/* carouselドット位置 */
+.slick-dots  {
+  bottom: 10px!important;
+}
+
+/* スクロール後のimg指定 */
+.main-visual-animation{
+  width: 94%;
+  transition: width 0.3s ease; /* スムーズな変化 */
+}
+
+.main-logo-area {
+  background-image: url("background-img.png");
+  background-size: contain;
+  position: absolute;
+  width: 430px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: block;
+
+}
+
+.logo img{
+  display: block;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+
+}
+
+.main-address {
+  font-size: 2.0rem;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.main-tel {
+  font-size: 2.0rem;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.main-reservation-btm img{
+  display: block;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 15px;
+
+
+}
+
+.news {
+  margin-top: 40px;
+  margin-left: 130px;
+}
+
+.news-title {
+
+}
+
+.news-list {
+  list-style: none;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+
+}
+
+.news-list-text {
+  margin-top: 10px;
+
+}
+
+.news-more img{
+  width: 140px;
+  height: 40px;
+  float: right;
+
+
+}
+
+.about {
+  margin-top: 80px;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-img img{
+  width: 90%;
+  height:90%;
+
+}
+
+.about-text {
+
+}
+
+.about-more {
+
+}
+
+.services {
+
+}
+
+.services-title {
+
+}
+
+.services-text {
+
+}
+
+.services-container {
+
+}
+
+.services-container-list {
+
+}
+
+.services-container-list-title {
+
+}
+
+.services-container-list-img {
+
+}
+
+.services-container-list-text {
+
+}
+
+.message {
+
+}
+
+.message-title {
+
+}
+
+.message-img {
+
+}
+
+.message-text {
+
+}
+
+.message-more {
+
+}
+
+.footer {
+
+}
+
+.footer-container {
+
+}
+
+.footer-container-left {
+
+}
+
+.footer-container-left-address {
+
+}
+
+.footer-container-left-access {
+
+}
+
+.footer-container-left-access-info {
+
+}
+
+.footer-container-left-tel {
+
+}
+
+.footer-container-left-reservation-btm {
+
+}
+
+.footer-container-right {
+
+}
+
+.footer-navi {
+
+}
+
+.footer-navi-category {
+
+}
+
+.footer-navi-item-list {
+
+}
+
+.footer-navi-item-list-text {
+
+}
+
+.footer-copyright {
+
+}
+
+
+
+/* レスポンシブ */
+@media screen and (max-width: 1279.9px) {
+.main-logo-area {
+  width: 270px;
+  height: 240px;
+}
+
+.logo img{
+  width:  80%;
+  height: 80%;
+}
+
+.main-address {
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.main-tel {
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.main-reservation-btm img{
+  display: block;
+  width:  50%;
+  height: 50%;
+  margin-left: 15px;
+}
+}
+
+@media screen and (max-width: 767.9px) {
+
+  /* header */
+.header {
+  width: 60px;
+  font-size: 1.4rem;
+}
+
+.nav {
+}
+
+.nav-inner {
+}
+
+.nav-inner-menu img{
+  width: 50%;
+}
+
+.nav-inner-menu-reservation img{
+  margin-top: 20px;
+  width: 80%;
+}
+
+.nav-inner-access img{
+  margin-top: 20px;
+  width: 80%;
+}
+
+.nav-inner-TOP img{
+  margin-top: 20px;
+  width: 80%;
+}
+
+/* メインビジュアル */
+.carousel-section{
+  width: 100vw;
+}
+.main-logo-area {
+  width: 200px;
+  height: 180px;
+}
+
+.logo img{
+  width:  60%;
+  height: 60%;
+}
+
+.main-address {
+  font-size: 1.4rem;
+  margin-left: 5px;
+}
+
+.main-tel {
+  font-size: 1.4rem;
+  margin-left: 5px;
+}
+
+.main-reservation-btm img{
+  width:  30%;
+  height: 30%;
+  margin-left: 10px;
+}
+}
