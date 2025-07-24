@@ -8,28 +8,11 @@
     arrows: false,
   });
 
-  // nav
-  window.addEventListener("scroll", function () {
-  const elm = document.querySelector(".header");
-  const scroll = window.pageYOffset;
-  if (scroll > 50) {
-    elm.style.opacity = "1";
-    elm.style.zIndex = "1";
-    // console.log(scroll);
-  } else {
-    elm.style.opacity = "0";
-    elm.style.zIndex = "-1";
-    // console.log(scroll);
-  }
+$(function () {
+  $('#js-hamburger-menu, .navigation-link').on('click', function () {
+    $('.navigation').slideToggle(500)
+    $('.hamburger-menu').toggleClass('hamburger-menu-open')
+  });
 });
 
-$(function() {
-	$(window).on('load scroll', function() {
-		var scrollPos = $(this).scrollTop();
-		if ( scrollPos > 50 ) {
-			$('main').addClass('main-visual-animation');
-		} else {
-			$('main').removeClass('main-visual-animation');
-		}
-	});
-});
+

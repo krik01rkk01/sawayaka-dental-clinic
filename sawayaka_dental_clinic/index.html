@@ -23,68 +23,93 @@
 </head>
 
 <body>
-    <div class="header">
-     <!-- サイドナビ -->
-        <nav class="nav">
-            <div class="nav-inner">
-                <div class="nav-inner-menu">
-                    <a href=""><img src="assets/images/header/hamburger.png" alt="MENU"></a>
-                        <p>MENU</p>
-                </div>
+    <div class="container">
+        <div class="right-section">
+            <header class="header">
+    <!-- ここからhamburger-menu -->
+                <button class="hamburger-menu" id="js-hamburger-menu">
+                    <span class="hamburger-menu-bar"></span>
+                    <span class="hamburger-menu-bar"></span>
+                    <span class="hamburger-menu-bar"></span>
+                </button>
+    <!-- ここからhamburger-menuの中 -->
+                <nav class="navigation">
+                    <h1 class="navigation-logo">
+                        <img src="assets/images/top/ロゴ.png" width="160" height="40" alt="さわやかデンタルクリニックのロゴ">
+                    </h1>
+                    <ul class="navigation-button">
+                        <li><a href="index.html"><img src="assets/images/header/WEB予約.png" alt="WEB予約"></a></li>
+                        <li><a href="index.html"><img src="assets/images/header/アクセス.png" alt="アクセス"></a></li>
+                    </ul>
+                    <ul class="navigation-list">
+                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">トップページ</a></li>
+                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">クリニック紹介</a></li>
+                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">診療内容</a></li>
+                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">お問い合わせ</a></li>
+                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">スタッフブログ</a></li>
+                    </ul>
+                     <p class="address">〒105-0001<br>東京都港区虎ノ門1丁目3-1</p>
+                     <p class="address-access">東京メトロ 虎ノ門駅より<br class="sp_br">直結・徒歩1分</p>
+                     <p class="address-info">駐車場ございません。<br>近隣のコインパーキングを<br class="sp_br">ご利用ください。</p>
+                </nav>
+    <!-- ここまでhamburger-menu -->
                 <div class="nav-inner-menu-reservation">
-                    <a href=""><img src="assets/images/header/WEB予約btm.png" alt="WEB予約"></a>
+                    <a href="index.html"><img src="assets/images/header/WEB予約btm.png" alt="WEB予約"></a>
                         <p>WEB<br>予約</p>
                 </div>
                 <div class="nav-inner-access">
-                    <a href=""><img src="assets/images/header/アクセスbtm.png" alt="アクセス"></a>
+                    <a href="index.html"><img src="assets/images/header/アクセスbtm.png" alt="アクセス"></a>
                         <p>アクセス</p>
                 </div>
                 <div class="nav-inner-TOP">
-                    <a href=""><img src="assets/images/header/TOPbtm.png" alt="TOP"></a>
+                    <a href="index.html"><img src="assets/images/header/TOPbtm.png" alt="TOP"></a>
                         <p>TOP</p>
                 </div>
-            </div>
-        </nav>
-    </div>
+
+            </header>
+        </div>
     <!-- ここまでheader -->
 
-    <main class="main">
+        <div class="left-section">
+        <main class="main">
     <!-- ここからメインビジュアル -->
-        <section class="carousel-section">
-          <div>
-            <img class="main-visual" src="assets/images/top/Carousel1.jpg" alt="治療台">
-          </div>
-          <div>
-            <img class="main-visual" src="assets/images/top/Carousel2.jpg" alt="待合室と治療台">
-          </div>
-          <div>
-            <img class="main-visual" src="assets/images/top/Carousel3.jpg" alt="待合室">
-          </div>
-      </section>
-        <div class="main-logo-area">
-            <h1 class="logo">
-                <a href="index.html" >
-                <img src="assets/images/top/ロゴ.png" width="370" height="100"  alt="さわやかデンタルクリニックのロゴ"></a>
-            </h1>
-            <p class="main-address">東京都港区虎ノ門1丁目3-1</p>
-            <p class="main-tel">TEL 090-123-4567</p>
-            <p class="main-reservation-btm">
-                <a href="index.html" >
-                    <img src="assets/images/top/btm予約.png" width="280" height="80"  alt="WEB予約"></a>
-            </p>
-        </div>
+            <section class="mv">
+                <div class="carousel-section">
+                <div>
+                    <img class="main-visual" src="assets/images/top/Carousel1.jpg" alt="治療台">
+                </div>
+                <div>
+                    <img class="main-visual" src="assets/images/top/Carousel2.jpg" alt="待合室と治療台">
+                </div>
+                <div>
+                    <img class="main-visual" src="assets/images/top/Carousel3.jpg" alt="待合室">
+                </div>
+                </div>
+                <div class="main-logo-area">
+                    <h1 class="logo">
+                    <a href="index.html" >
+                        <img src="assets/images/top/ロゴ.png" width="370" height="100"  alt="さわやかデンタルクリニックのロゴ"></a>
+                    </h1>
+                    <p class="main-address">東京都港区虎ノ門1丁目3-1</p>
+                    <p class="main-tel">TEL 090-123-4567</p>
+                    <p class="main-reservation-btm">
+                        <a href="index.html" >
+                        <img src="assets/images/top/btm予約.png" width="280" height="80"  alt="WEB予約"></a>
+                    </p>
+                </div>
+            </section>
 
     <!-- ここからお知らせ -->
-        <section class="news">
+            <section class="news">
             <h3 class="news-title">お知らせ</h3>
             <ul class="news-list">
                 <li class="news-list-text">
                     <time datetime="2025-04-27T21:07:23+09:00">2025.04.27</time>
-                    <a href="">2025年、ゴールデンウィークの診療について</a>
+                    <a href="index.html">ゴールデンウィークの診療について</a>
                 </li>
                 <li class="news-list-text">
                     <time datetime="2025-04-27T21:07:23+09:00">2025.04.27</time>
-                    <a href="">2025年、ゴールデンウィークの診療について</a>
+                    <a href="index.html"> ゴールデンウィークの診療について</a>
                 </li>
             </ul>
             <div class="news-more">
@@ -92,9 +117,11 @@
                 <img src="assets/images/top/お知らせ一覧.png" alt="お知らせ一覧"></a>
             </div>
         </section>
+        </main>
+     </div>
+    </div>
 
-
-    <!-- ここからクリニック紹介 -->
+     <!-- ここからクリニック紹介 -->
         <section class="about">
             <h2 class="about-title">地域の皆様が安心して通える、家族みんなのための歯科医院</h2>
             <div class="about-img">
@@ -166,7 +193,6 @@
                 <img src="assets/images/favicon/詳細はこちら.png" alt="詳細はこちら"></a>
             </div>
         </section>
-    </main>
 
     <footer class="footer">
         <h1 class="header-logo">
@@ -186,7 +212,7 @@
          </div>
         <div class="footer-container-right">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.280497382697!2d139.7469133741355!3d35.67009473058842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9278cad6bd%3A0xf8a15f79423fdee0!2z44CSMTA1LTAwMDEg5p2x5Lqs6YO95riv5Yy66JmO44OO6ZaA77yR5LiB55uu77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1751849467938!5m2!1sja!2sjp" 
-             width="550" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+             width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
 

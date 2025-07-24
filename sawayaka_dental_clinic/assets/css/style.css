@@ -5,41 +5,169 @@
 
 html{
   font-size: 62.5%;
-  /* 1rem = 16px  1rem=10px*/
+/* 1rem = 16px  1rem=10px*/
 }
 
 body {
-  max-width: 1440px;
   font-family: "Noto Sans JP", serif;
   line-height: 1.5;
   letter-spacing: 0.05rem;
 }
 
-  /* header */
+/* header-navとmainを分割 */
+.container{
+  display: flex;
+}
+
+.right-section { /* header-nav*/
+  width: 90px;
+  position: absolute;
+  right: 0;
+}
+
+.left-section {/* main */
+  width: calc(100% - 90px);
+}
+
+ /* header nav*/
 .header {
-  height: 100vh;
-  background: #E9DFC3;
-  border-radius: 2px;
-  float: right;
-  right: 0px;
-  transition: 0.5s;
-  font-size: 1.6rem;
   position: fixed;
-}
-
-.nav {
-  margin: 0 auto;
-
-
-}
-
-.nav-inner {
+  height: 100vh;
+ /* #E9DFC3 66 (40%透明度) */
+  background: #E9DFC366;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  z-index: 9999;
   text-align: center;
 }
 
-.nav-inner-menu img{
-  margin-top: 0;
-  width: 70%;
+.hamburger-menu {
+  width: 90px;
+  height: 60px;
+  position: relative;
+  border: none;
+  background: transparent;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.hamburger-menu-bar {
+  display: inline-block;
+  width: 44%;
+  height: 2px;
+  background: #242424;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: .5s;
+}
+
+.hamburger-menu-bar:first-child {
+  top: 20px;
+}
+
+.hamburger-menu-bar:nth-child(2) {
+  top: 30px;
+}
+
+.hamburger-menu-bar:last-child {
+  top: 40px;
+}
+
+.hamburger-menu-open .hamburger-menu-bar {
+  top: 50%;
+}
+
+.hamburger-menu-open .hamburger-menu-bar:first-child {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu-open .hamburger-menu-bar:last-child {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu-open .hamburger-menu-bar:nth-child(2) {
+  display: none;
+}
+
+.navigation {
+  display: none;
+  margin-left: calc(50% - 40vw);
+  background: #E9DFC3;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.navigation-logo img{
+  margin: 10px;
+}
+
+.navigation-button {
+  list-style-type: none; /* リストマーカーを非表示 */
+  padding: 0; /* ul要素のpaddingをリセット */
+  margin: 0; /* ul要素のmarginをリセット */
+  display: flex; /* flexboxを適用 */
+}
+
+.navigation-button img{
+  display: block;
+  width: 30%;
+}
+
+.navigation-list {
+  text-align: center;
+  list-style: none;
+}
+
+.navigation-list-item {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.navigation-list-item:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;/*線の上下位置*/
+  display: inline-block;
+  width: 400px;/*線の長さ*/
+  height: 2px;/*線の太さ*/
+  transform: translateX(-50%);/*位置調整*/
+  background-color: #1B56FD;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+
+.navigation-link {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+}
+
+
+.address {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
+
+.address-access {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
+
+.address-info {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #FF0000;
+  font-size: 1.4rem;
+}
+
+.sp_br {
+  display: none;
+  /* 1279.9px以上では改行タグを無効に。 */
 }
 
 .nav-inner-menu-reservation img{
@@ -57,13 +185,17 @@ body {
   width: 90%;
 }
 
+.left-section {
+}
+
 /* メインビジュアル */
 .main {
   position: relative;
 }
 
-.main-visual  {
+.mv {
   width: 100%;
+  z-index: 11;
 }
 
 .carousel-section {
@@ -71,16 +203,15 @@ body {
   transition: width 0.3s ease; /* スムーズな変化 */
 }
 
+.main-visual{
+  width: 100%;
+}
+
 /* carouselドット位置 */
 .slick-dots  {
   bottom: 10px!important;
 }
 
-/* スクロール後のimg指定 */
-.main-visual-animation{
-  width: 94%;
-  transition: width 0.3s ease; /* スムーズな変化 */
-}
 
 .main-logo-area {
   background-image: url("background-img.png");
@@ -90,9 +221,8 @@ body {
   height: 400px;
   top: 0;
   left: 0;
-  z-index: 11;
+  z-index: 12;
   display: block;
-
 }
 
 .logo img{
@@ -100,7 +230,6 @@ body {
   max-width: 100%;
   margin-top: 10px;
   margin-left: 10px;
-
 }
 
 .main-address {
@@ -120,8 +249,6 @@ body {
   max-width: 100%;
   margin-top: 10px;
   margin-left: 15px;
-
-
 }
 
 .news {
@@ -130,27 +257,32 @@ body {
 }
 
 .news-title {
-
+  font-size: 2.8rem;
 }
 
 .news-list {
   list-style: none;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 20px;
-  float: left;
+  text-decoration: underline #1B56FD;
+  text-underline-offset:16px;
 
 }
 
 .news-list-text {
-  margin-top: 10px;
+  margin-top: 32px;
+  font-size: 1.6rem;
+}
 
+a{
+  text-decoration: none;
+  color: #000;
 }
 
 .news-more img{
   width: 140px;
   height: 40px;
   float: right;
-
 
 }
 
@@ -168,214 +300,301 @@ body {
 
 }
 
-.about-text {
-
-}
-
-.about-more {
-
-}
-
-.services {
-
-}
-
-.services-title {
-
-}
-
-.services-text {
-
-}
-
-.services-container {
-
-}
-
-.services-container-list {
-
-}
-
-.services-container-list-title {
-
-}
-
-.services-container-list-img {
-
-}
-
-.services-container-list-text {
-
-}
-
-.message {
-
-}
-
-.message-title {
-
-}
-
-.message-img {
-
-}
-
-.message-text {
-
-}
-
-.message-more {
-
-}
-
-.footer {
-
-}
-
-.footer-container {
-
-}
-
-.footer-container-left {
-
-}
-
-.footer-container-left-address {
-
-}
-
-.footer-container-left-access {
-
-}
-
-.footer-container-left-access-info {
-
-}
-
-.footer-container-left-tel {
-
-}
-
-.footer-container-left-reservation-btm {
-
-}
-
-.footer-container-right {
-
-}
-
-.footer-navi {
-
-}
-
-.footer-navi-category {
-
-}
-
-.footer-navi-item-list {
-
-}
-
-.footer-navi-item-list-text {
-
-}
-
-.footer-copyright {
-
-}
-
-
-
 /* レスポンシブ */
 @media screen and (max-width: 1279.9px) {
+
+.right-section { /* header-nav*/
+  width: 60px;
+}
+
+.left-section {/* main */
+  width: calc(100% - 60px);
+}
+ /* header nav */
+.header {
+  font-size: 1.4rem;
+}
+
+.hamburger-menu {
+  width: 60px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.hamburger-menu-bar:first-child {
+  top: 15px;
+}
+
+.hamburger-menu-bar:nth-child(2) {
+  top: 20px;
+}
+
+.hamburger-menu-bar:last-child {
+  top: 25px;
+}
+
+.hamburger-menu-open .hamburger-menu-bar {
+  top: 50%;
+}
+
+.hamburger-menu-open .hamburger-menu-bar:first-child {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu-open .hamburger-menu-bar:last-child {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu-open .hamburger-menu-bar:nth-child(2) {
+  display: none;
+}
+
+.navigation {
+
+}
+
+.navigation-button {
+  list-style-type: none; /* リストマーカーを非表示 */
+  padding: 0; /* ul要素のpaddingをリセット */
+  margin: 0; /* ul要素のmarginをリセット */
+  display: flex; /* flexboxを適用 */
+}
+
+.navigation-button img{
+  display: block;
+  width: 30%;
+}
+
+.navigation-list-item:before {
+  bottom: -10px;/*線の上下位置*/
+  display: inline-block;
+  width: 300px;/*線の長さ*/
+  height: 2px;/*線の太さ*/
+}
+
+.navigation-link {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 20px;
+}
+.address {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.address-access {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.address-info {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #FF0000;
+  font-size: 1.2rem;
+}
+
+.sp_br {
+    display: block;
+    /* 1279.9px未満で改行タグを有効に。 */
+  }
+
+.nav-inner-menu-reservation img{
+  margin: 30px 5px 0 5px;
+  width: 70%;
+}
+
+.nav-inner-access img{
+  margin: 30px 5px 0 5px;
+  width: 70%;
+}
+
+.nav-inner-TOP img{
+  margin: 30px 5px 0 5px;
+  width: 70%;
+}
+
+/* メインビジュアル */
 .main-logo-area {
-  width: 270px;
-  height: 240px;
+  width: 290px;
+  height: 290px;
 }
 
 .logo img{
-  width:  80%;
-  height: 80%;
+  width: 80%;
+  height: auto;
 }
 
 .main-address {
-  font-size: 1.8rem;
-  margin-left: 10px;
+  font-size: 1.6rem;
 }
 
 .main-tel {
-  font-size: 1.8rem;
-  margin-left: 10px;
+  font-size: 1.6rem;
 }
 
 .main-reservation-btm img{
-  display: block;
-  width:  50%;
-  height: 50%;
-  margin-left: 15px;
+  width: 60%;
+  height: auto;
 }
 }
 
 @media screen and (max-width: 767.9px) {
+.right-section { /* header-nav*/
+  width: 40px;
+  right: 10px;
+}
 
-  /* header */
+.left-section {/* main */
+  width: calc(100% - 0px);
+}
+ /* header nav*/
 .header {
-  width: 60px;
-  font-size: 1.4rem;
+  height: 0vh;
+  opacity: 1;
 }
 
-.nav {
+.hamburger-menu {
+  width: 40px;
+  height: 30px;
+  background: #E9DFC366;
+  border-radius: 10px;
+  padding: 0;
 }
 
-.nav-inner {
+.hamburger-menu-bar:first-child {
+  top: 10px;
 }
 
-.nav-inner-menu img{
+.hamburger-menu-bar:nth-child(2) {
+  top: 15px;
+}
+
+.hamburger-menu-bar:last-child {
+  top: 20px;
+}
+
+.hamburger-menu-open .hamburger-menu-bar {
+  top: 50%;
+}
+
+.hamburger-menu-open .hamburger-menu-bar:first-child {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu-open .hamburger-menu-bar:last-child {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu-open .hamburger-menu-bar:nth-child(2) {
+  display: none;
+}
+
+.navigation {
+}
+
+.navigation-logo img{
+  margin: 10px;
   width: 50%;
+  height: 50%;
 }
 
-.nav-inner-menu-reservation img{
-  margin-top: 20px;
-  width: 80%;
+.navigation-buttom {
+  list-style-type: none; /* リストマーカーを非表示 */
+  padding: 0; /* ul要素のpaddingをリセット */
+  margin: 0; /* ul要素のmarginをリセット */
+  display: flex; /* flexboxを適用 */
 }
 
-.nav-inner-access img{
+.navigation-buttom img{
+  display: block;
+  width: 30%;
+}
+
+.navigation-list {
+}
+
+.navigation-list-item:before{
+  bottom: -10px;/*線の上下位置*/
+  width: 150px;/*線の長さ*/
+  height: 2px;/*線の太さ*/
+
+}
+
+.navigation-link {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 10px;
+}
+
+.address {
   margin-top: 20px;
-  width: 80%;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.address-access {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.address-info {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #FF0000;
+  font-size: 1.2rem;
+}
+
+.nav-inner-menu-reservation {
+  display: none;
+}
+
+.nav-inner-access {
+  display: none;
+}
+
+.nav-inner-TOP {
+  font-size: 1.6rem;
+  position: fixed;
+  bottom: 0;
 }
 
 .nav-inner-TOP img{
-  margin-top: 20px;
-  width: 80%;
+  margin-top: 36px;
+  width: 60%;
 }
 
 /* メインビジュアル */
-.carousel-section{
-  width: 100vw;
-}
 .main-logo-area {
-  width: 200px;
-  height: 180px;
+  width: 175px;
+  height: 175px;
 }
 
 .logo img{
-  width:  60%;
-  height: 60%;
+  width: 70%;
+  height: auto;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .main-address {
-  font-size: 1.4rem;
-  margin-left: 5px;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 .main-tel {
   font-size: 1.4rem;
-  margin-left: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 .main-reservation-btm img{
-  width:  30%;
-  height: 30%;
+  width: 50%;
+  height: auto;
+  margin-top: 5px;
   margin-left: 10px;
 }
 }
+
+
+
