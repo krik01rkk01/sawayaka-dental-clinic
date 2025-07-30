@@ -34,23 +34,26 @@
                 </button>
     <!-- ここからhamburger-menuの中 -->
                 <nav class="navigation">
-                    <h1 class="navigation-logo">
+                    <div class="navigation-logo">
                         <img src="assets/images/top/ロゴ.png" width="160" height="40" alt="さわやかデンタルクリニックのロゴ">
-                    </h1>
-                    <ul class="navigation-button">
-                        <li><a href="index.html"><img src="assets/images/header/WEB予約.png" alt="WEB予約"></a></li>
-                        <li><a href="index.html"><img src="assets/images/header/アクセス.png" alt="アクセス"></a></li>
-                    </ul>
-                    <ul class="navigation-list">
-                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">トップページ</a></li>
-                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">クリニック紹介</a></li>
-                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">診療内容</a></li>
-                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">お問い合わせ</a></li>
-                        <li class="navigation-list-item"><a href="index.html" class="navigation-link">スタッフブログ</a></li>
-                    </ul>
-                     <p class="address">〒105-0001<br>東京都港区虎ノ門1丁目3-1</p>
-                     <p class="address-access">東京メトロ 虎ノ門駅より<br class="sp_br">直結・徒歩1分</p>
-                     <p class="address-info">駐車場ございません。<br>近隣のコインパーキングを<br class="sp_br">ご利用ください。</p>
+                    </div>
+                    <div class="navigation-inner">
+                        <ul class="navigation-button">
+                            <li><a href="index.html"><img src="assets/images/header/WEB予約.png" alt="WEB予約"></a></li>
+                            <li><a href="index.html"><img src="assets/images/header/アクセス.png"  alt="アクセス"></a></li>
+                        </ul>
+                        <ul class="navigation-list">
+                            <li class="navigation-list-item"><a href="index.html" class="navigation-link">トップページ</a></li>
+                            <li class="navigation-list-item"><a href="index.html" class="navigation-link">クリニック紹介</a></li>
+                            <li class="navigation-list-item"><a href="index.html" class="navigation-link">診療内容</a></li>
+                            <li class="navigation-list-item"><a href="index.html" class="navigation-link">お問い合わせ</a></li>
+                            <li class="navigation-list-item"><a href="index.html" class="navigation-link">スタッフブログ</a></li>
+                        </ul>
+                        <div class="navigation-text">
+                            <p class="navigation-address">〒105-0001<br>東京都港区虎ノ門1丁目3-1</p>
+                            <p class="navigation-address">東京メトロ 虎ノ門駅より直結・徒歩1分<br><span class="color-red">駐車場ございません。<br>近隣のコインパーキングをご利用ください。</span></p>
+                        </div>
+                    </div>
                 </nav>
     <!-- ここまでhamburger-menu -->
                 <div class="nav-inner-menu-reservation">
@@ -65,13 +68,11 @@
                     <a href="index.html"><img src="assets/images/header/TOPbtm.png" alt="TOP"></a>
                         <p>TOP</p>
                 </div>
-
             </header>
         </div>
     <!-- ここまでheader -->
 
         <div class="left-section">
-        <main class="main">
     <!-- ここからメインビジュアル -->
             <section class="mv">
                 <div class="carousel-section">
@@ -88,7 +89,8 @@
                 <div class="main-logo-area">
                     <h1 class="logo">
                     <a href="index.html" >
-                        <img src="assets/images/top/ロゴ.png" width="370" height="100"  alt="さわやかデンタルクリニックのロゴ"></a>
+                        <img src="assets/images/top/ロゴ.png" width="370" height="100"  alt="さわやかデンタルクリニックのロゴ">
+                    </a>
                     </h1>
                     <p class="main-address">東京都港区虎ノ門1丁目3-1</p>
                     <p class="main-tel">TEL 090-123-4567</p>
@@ -99,175 +101,189 @@
                 </div>
             </section>
 
+            <main class="main">
     <!-- ここからお知らせ -->
             <section class="news">
-            <h3 class="news-title">お知らせ</h3>
-            <ul class="news-list">
-                <li class="news-list-text">
-                    <time datetime="2025-04-27T21:07:23+09:00">2025.04.27</time>
-                    <a href="index.html">ゴールデンウィークの診療について</a>
-                </li>
-                <li class="news-list-text">
-                    <time datetime="2025-04-27T21:07:23+09:00">2025.04.27</time>
-                    <a href="index.html"> ゴールデンウィークの診療について</a>
-                </li>
-            </ul>
-            <div class="news-more">
-                <a href="" >
-                <img src="assets/images/top/お知らせ一覧.png" alt="お知らせ一覧"></a>
-            </div>
-        </section>
-        </main>
-     </div>
-    </div>
+                <h3 class="news-title">お知らせ</h3>
+                    <ul class="news-list">
+                        <li class="news-list-text">
+                            <time datetime="2025-04-27T21:07:23+09:00">2025.04.27</time>
+                            <a href="index.html">ゴールデンウィークの診療について</a>
+                        </li>
+                        <li class="news-list-text">
+                        <time datetime="2025-04-27T21:07:23+09:00">2025.04.27</time>
+                        <a href="index.html"> ゴールデンウィークの診療について</a>
+                        </li>
+                    </ul>
+                <div class="news-more">
+                    <a href="index.html" >
+                    <img src="assets/images/about/お知らせ一覧.png" alt="お知らせ一覧"></a>
+                </div>
+            </section>
 
      <!-- ここからクリニック紹介 -->
-        <section class="about">
-            <h2 class="about-title">地域の皆様が安心して通える、家族みんなのための歯科医院</h2>
-            <div class="about-img">
-                <img src="assets/images/top/img3.jpg" alt="治療台">
-            </div>
-            <p class="about-text">
-                当院は、小さなお子さまからご年配の方まで、どなたでも<br>安心して通える歯科クリニックを目指しています。<br>
-                単に「治療をする」のではなく、患者さんの不安を和らげ、<br>笑顔で通えることを大切にし、最新の設備とやさしい診療で<br>家族みんなの健康な歯を守れるようサポートしていきます。
-            </p>
-            <div class="about-more">
-                <a href="" >
-                <img src="assets/images/top/詳細はこちら.png" alt="詳細はこちら"></a>
-            </div>
-        </section>
+            <section class="about">
+                <h2 class="about-title">地域の皆様が安心して通える、<br class="br-sp">家族みんなのための歯科医院</h2>
+                <div class="about-img">
+                    <img src="assets/images/about/診療台.png" alt="治療台">
+                <p class="about-text">
+                    当院は、小さなお子さまからご年配の方まで、どなたでも<br>安心して通える歯科クリニックを目指しています。<br>
+                    単に「治療をする」のではなく、患者さんの不安を和らげ、<br>笑顔で通えることを大切にし、最新の設備とやさしい診療で<br>家族みんなの健康な歯を守れるようサポートしていきます。
+                </p>
+                </div>
+                <div class="about-more">
+                    <a href="index.html" >
+                    <img src="assets/images/about/詳細はこちら.png" alt="詳細はこちら"></a>
+                </div>
+            </section>
 
     <!-- ここから診療内容 -->
-        <section class="services">
-            <h3 class="services-title">診療内容</h3>
-            <p class="services-text">
-                さわやか歯科クリニックでは幅広い診療を行っております。<br>
-                歯やお口のお悩みがある方は、お気軽にご相談ください。
-            </p>
-            <ul class="services-container">
-                <li class="services-container-list">
-                    <p class="services-container-list-title">一般歯科</p>
-                    <figure class="services-container-list-img">
-                        <img src="assets/images/favicon/ph_tooth.png" alt="一般歯科">
-                    </figure>
-                    <p class="services-container-list-text">虫歯・歯周病<br>根管治療</p>
-                </li>
-                <li class="services-container-list">
-                    <p class="services-container-list-title">小児歯科</p>
-                    <figure class="services-container-list-img">
-                        <img src="assets/images/favicon/hugeicons_child.png" alt="小児歯科">
-                    </figure>
-                    <p class="services-container-list-text">お子さまの治療</p>
-                </li>
-                <li class="services-container-list">
-                    <p class="services-container-list-title">口腔外科</p>
-                    <figure class="services-container-list-img">
-                        <img src="assets/images/favicon/Group.png" alt="口腔外科">
-                    </figure>
-                    <p class="services-container-list-text">親知らずの抜歯<br>顎関節症の治療 </p>
-                </li>
-                <li class="services-container-list">
-                    <p class="services-container-list-title">予防歯科</p>
-                    <figure class="services-container-list-img">
-                        <img src="assets/images/favicon/ph_tooth.png" alt="予防歯科">
-                    </figure>
-                    <p class="services-container-list-text">定期検診・クリーニング<br>歯周病の予防と早期発見 </p>
-                </li>
-            </ul>
-        </section>
+            <section class="services">
+                <h3 class="services-title">診療内容</h3>
+                <p class="services-text">
+                    さわやか歯科クリニックでは幅広い診療を行っております。<br>
+                    歯やお口のお悩みがある方は、お気軽にご相談ください。
+                </p>
+                <ul class="services-container">
+                    <li class="services-container-list">
+                        <p class="services-container-list-title">一般歯科</p>
+                        <figure class="services-container-list-img">
+                            <img src="assets/images/favicon/ph_tooth.png" alt="一般歯科">
+                        </figure>
+                        <p class="services-container-list-text">虫歯・歯周病<br>根管治療</p>
+                        <div class="services-container-list-arrow"></div>
+                        <div class="arrow services-container-list-arrow"></div>
+
+                    </li>
+                    <li class="services-container-list">
+                        <p class="services-container-list-title">小児歯科</p>
+                        <figure class="services-container-list-img">
+                            <img src="assets/images/favicon/hugeicons_child.png" alt="小児歯科">
+                        </figure>
+                        <p class="services-container-list-text">お子さまの治療<br><br></p>
+                        <div class="services-container-list-arrow"></div>
+                        <div class="arrow services-container-list-arrow"></div>
+                    </li>
+                    <li class="services-container-list">
+                        <p class="services-container-list-title">口腔外科</p>
+                        <figure class="services-container-list-img">
+                            <img src="assets/images/favicon/Group.png" alt="口腔外科">
+                        </figure>
+                        <p class="services-container-list-text">親知らずの抜歯<br>顎関節症の治療 </p>
+                        <div class="services-container-list-arrow"></div>
+                        <div class="arrow services-container-list-arrow"></div>
+                    </li>
+                    <li class="services-container-list">
+                        <p class="services-container-list-title">予防歯科</p>
+                        <figure class="services-container-list-img">
+                            <img src="assets/images/favicon/fluent-mdl2_teeth.png" alt="予防歯科">
+                        </figure>
+                        <p class="services-container-list-text">定期検診・クリーニング<br>歯周病の予防と早期発見 </p>
+                        <div class="arrow services-container-list-arrow"></div>
+                    </li>
+                </ul>
+            </section>
 
     <!-- ここから院長あいさつ -->
-        <section class="message">
-            <h3 class="message-title">院長あいさつ</h3>
-            <div class="message-img">
-                <img src="assets/images/top/doctor2_matsumoto.jpg" alt="松本院長">
-            </div>
-            <p class="message-text">
-                みなさま、こんにちは。<br>「さわやか歯科クリニック」院長の松本貴子です。<br>
-                当院は、小さなお子さまからご年配の方まで、安心して<br>通える歯科クリニック を目指しています。<br>
-                地域のみなさまにとって、「ここなら安心して通える」<br>と思っていただけるクリニックを目指し、スタッフ一同、<br>
-                努力してまいります。<br>どうぞよろしくお願いいたします。
-            </p>
-            <div class="message-more">
-                <a href="" >
-                <img src="assets/images/favicon/詳細はこちら.png" alt="詳細はこちら"></a>
-            </div>
-        </section>
+            <section class="message">
+                <h3 class="message-title">院長あいさつ</h3>
+                    <div class="message-img">
+                        <img src="assets/images/about/matsumoto.png" alt="松本院長">
+                        <p class="message-text">
+                            みなさま、こんにちは。<br>「さわやか歯科クリニック」院長の松本貴子です。<br>
+                            当院は、小さなお子さまからご年配の方まで、安心して<br>通える歯科クリニック を目指しています。<br>
+                            地域のみなさまにとって、「ここなら安心して通える」<br>と思っていただけるクリニックを目指し、スタッフ一同、<br>
+                            努力してまいります。<br>どうぞよろしくお願いいたします。
+                        </p>
+                    </div>
+                <div class="message-more">
+                    <a href="index.html" >
+                    <img src="assets/images/about/詳細はこちら.png" alt="詳細はこちら"></a>
+                </div>
+            </section>
+            </main>
 
-    <footer class="footer">
-        <h1 class="header-logo">
-            <img src="assets/images/favicon/logo.png" width="430" height="120" alt="さわやかデンタルクリニックのロゴ">
-        </h1>
-        <div class="footer-container">
-            <div class="footer-container-left">
-                <p class="footer-container-left-address">〒105-0001<br>東京都港区虎ノ門1丁目3-1</p>
-                <p class="footer-container-left-access">東京メトロ 虎ノ門駅より直結・徒歩1分</p>
-                <p class="footer-container-left-access-info">駐車場ございません。<br>近隣のコインパーキングをご利用ください。</p>
-                <p class="footer-container-left-tel">ご予約・お問い合わせ</p>
-                    <img src="assets/images/favicon/mynaui_telephone.png" alt="TEL">
-                    <a href="tel:090-123-4567">090-123-4567</a>
-                <p class="footer-container-left-reservation-btm">
-                    <img src="assets/images/header/btm予約.png" alt="WEB予約"></p>
-            </div>
-         </div>
-        <div class="footer-container-right">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.280497382697!2d139.7469133741355!3d35.67009473058842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9278cad6bd%3A0xf8a15f79423fdee0!2z44CSMTA1LTAwMDEg5p2x5Lqs6YO95riv5Yy66JmO44OO6ZaA77yR5LiB55uu77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1751849467938!5m2!1sja!2sjp" 
-             width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <!-- ここからフッター -->
+            <footer class="footer">
+                <h1 class="header-logo">
+                    <img src="assets/images/footer/ロゴ.png"  alt="さわやかデンタルクリニックのロゴ">
+                </h1>
+                <div class="footer-container">
+                    <div class="footer-container-left">
+                        <p class="footer-container-left-address">〒105-0001<br>東京都港区虎ノ門1丁目3-1</p>
+                        <p class="footer-container-left-address">東京メトロ 虎ノ門駅より直結・徒歩1分<br><span class="color-red">駐車場ございません。<br>近隣のコインパーキングをご利用ください。</span></p>
+                        <p class="footer-container-left-tel">ご予約・お問い合わせ<br>
+                            <span class="tel-number">TEL 090-123-4567</span>
+                        </p>
+                        <p class="footer-container-left-reservation-btm">
+                            <img src="assets/images/footer/btm予約.png" alt="WEB予約">
+                        </p>
+                        <p class="footer-container-left-information">診療案内<br><span class="closed-days">休診日：水曜日・日曜日</span>
+                            <img src="assets/images/footer/診療案内表.png" alt="診療案内">
+                        </p>
+                    </div>
+                    <div class="footer-container-right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.280497382697!2d139.7469133741355!3d35.67009473058842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9278cad6bd%3A0xf8a15f79423fdee0!2z44CSMTA1LTAwMDEg5p2x5Lqs6YO95riv5Yy66JmO44OO6ZaA77yR5LiB55uu77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1751849467938!5m2!1sja!2sjp" 
+                            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <ul class="footer-nav-category">
+                        <li class="footer-nav-item-list">
+                            <a href="index.html">トップページ</a>
+                        </li>
+                        <li class="footer-nav-item-list">
+                            <a href="about.html">クリニック紹介</a>
+                        </li>
+
+                        <li class="footer-nav-item-list-text">
+                            <a href="index.html">大切にしていること</a></li>
+                        <li class="footer-nav-item-list-text">
+                            <a href="index.html">当院の特徴</a></li>
+
+                        <li class="footer-nav-item-list-text">
+                            <a href="index.html">院長あいさつ</a>
+                        </li>
+                        <li class="footer-nav-item-list-text">
+                            <a href="index.html">スタッフ紹介</a></li>
+
+                        <li class="footer-nav-item-list">
+                            <a href="services.html">診療内容</a>
+                        </li>
+                        <li class="footer-nav-item-list-text">
+                            <a href="index.html">一般歯科</a></li>
+                        <li class="footer-nav-item-list-text">
+                             <a href="">小児歯科</a></li>
+                        <li class="footer-nav-item-list-text">
+                            <a href="">予防歯科</a></li>
+
+                        <li class="footer-nav-item-list">
+                            <a href="">アクセス</a>
+                         </li>
+
+                        <li class="footer-nav-item-list">
+                            <a href="">WEB予約</a>
+                        </li>
+
+                        <li class="footer-nav-item-list">
+                            <a href="">お知らせ</a>
+                        </li>
+
+                        <li class="footer-nav-item-list">
+                            <a href="">ブログ</a>
+                        </li>
+
+                        <li class="footer-nav-item-list">
+                            <a href="">個人情報保護方針</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer-copyright">© 2025 sawayaka dental clinic</p>
+            </footer>
         </div>
-
-        <div class="footer-navi">
-            <ul class="footer-navi-category">
-                <li class="footer-navi-item-list">
-                    <a href="index.html">トップページ</a>
-                </li>
-
-                <li class="footer-navi-item-list">
-                    <a href="about.html">クリニック紹介</a>
-                </li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">大切にしていること</a></li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">当院の特徴</a></li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">院長あいさつ</a></li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">スタッフ紹介</a></li>
-
-                <li class="footer-navi-item-list">
-                    <a href="services.html">診療内容</a>
-                </li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">一般歯科</a></li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">小児歯科</a></li>
-                <li class="footer-navi-item-list-text">
-                    <a href="">予防歯科</a></li>
-
-                 <li class="footer-navi-item-list">
-                    <a href="">アクセス</a>
-                </li>
-
-                 <li class="footer-navi-item-list">
-                    <a href="">WEB予約</a>
-                </li>
-
-                 <li class="footer-navi-item-list">
-                    <a href="">お知らせ</a>
-                </li>
-
-                 <li class="footer-navi-item-list">
-                    <a href="">ブログ</a>
-                </li>
-
-                 <li class="footer-navi-item-list">
-                    <a href="">個人情報保護方針</a>
-                </li>
-            </ul>
-        </div>
-
-        <p class="footer-copyright">© 2025 sawayaka dental clinic</p>
-    </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
