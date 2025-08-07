@@ -22,7 +22,14 @@ img {
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease;
 }
+
+a:hover {
+  opacity: .7;
+}
+
 
 ul,ol {
   list-style: none;
@@ -43,10 +50,6 @@ li {
   width: 90px;
   position: absolute;
   right: 0;
-}
-
-.left-section {/* main */
-  width: calc(100% - 90px);
 }
 
  /* header nav*/
@@ -109,7 +112,7 @@ li {
   display: none;
 }
 
-.navigation {
+.nav {
   display: none;
   background: #E9DFC3;
   border-radius: 10px;
@@ -121,52 +124,52 @@ li {
   text-align: left;
 }
 
-.navigation-logo {
+.nav-logo {
   width: 180px;
   display: block;
 }
 
-.navigation-logo img{
+.nav-logo img{
   width: 100%;
 }
 
-.navigation-inner {
+.nav-inner {
   margin-top: 35px;
   max-width: 430px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.navigation-button {
+.nav-button {
   display: flex; /* flexboxを適用 */
   gap: 30px;
   justify-content: center;
   align-items: center;
 }
 
-.navigation-button li {
+.nav-button li {
   width: calc(100% - 70px);
 }
 
-.navigation-button li a {
+.nav-button li a {
   display: block;
 }
 
-.navigation-button li a img{
+.nav-button li a img{
   width: 100%;
 }
 
-.navigation-list {
+.nav-list {
   margin-top: 20px;
 }
 
-.navigation-list-item {
+.nav-list-item {
   position: relative;
   padding-left: 56px;
   padding-bottom: 10px;
 }
 
-.navigation-list-item:before {
+.nav-list-item:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -179,7 +182,7 @@ li {
   border-radius: 2px;/*線の丸み*/
 }
 
-.navigation-link {
+.nav-link {
   color: #000;
   text-decoration: none;
   display: block;
@@ -188,15 +191,15 @@ li {
   font-size: 2.2rem;
 }
 
-.navigation-text {
+.nav-text {
   margin-top: 30px;
 }
 
-.navigation-address {
+.nav-addr {
   font-size: 2.0rem;
 }
 
-.navigation-address:not(:first-child) {
+.nav-addr:not(:first-child) {
   margin-top: 10px;
 }
 
@@ -204,22 +207,32 @@ li {
   color: #FF0000;
 }
 
-.nav-inner-menu-reservation img{
+.nav-reservation {
+}
+
+.nav-reservation img{
   margin-top: 36px;
   width: 90%;
 }
 
-.nav-inner-access img{
+.nav-access {
+}
+
+.nav-access img{
   margin-top: 36px;
   width: 90%;
 }
 
-.nav-inner-TOP img{
+.nav-TOP {
+}
+
+.nav-TOP img{
   margin-top: 36px;
   width: 90%;
 }
 
-.left-section {
+.left-section {/* main */
+  width: calc(100% - 90px);
 }
 
 /* メインビジュアル */
@@ -266,7 +279,7 @@ li {
   margin-left: 10px;
 }
 
-.main-address {
+.main-addr {
   font-size: 2.0rem;
   margin-top: 10px;
   margin-left: 20px;
@@ -286,7 +299,7 @@ li {
 }
 
 .main{
-  margin: 40px 95px 150px 95px;
+  margin: 40px 95px 0px 95px;
 }
 
 /* ここからお知らせ */
@@ -356,7 +369,7 @@ margin-top: 80px;
 }
 
 .br-sp{
-  display: none;
+  display: block;
 }
 
 .about-img {
@@ -396,7 +409,7 @@ margin-top: 80px;
 }
 
 .services-text {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-top: 40px;
 
 }
@@ -404,22 +417,26 @@ margin-top: 80px;
 .services-container {
   display: flex;
   margin-top: 30px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-.services-container-list {
-  width: 240px;
+.services-list {
   height: 310px;
   border: 4px solid #1B56FD;
   border-radius: 2px;
+  width: calc( 100% / 4 -  25px * 3 / 4 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+  min-width: 230px;
 }
 
-.services-container-list-title {
+.services-list-title {
   font-size: 2.0rem;
   margin-top: 20px;
 }
 
-.services-container-list-img {
+.services-list-img {
   display: flex;
   width: 120px;
   height: 120px;
@@ -430,11 +447,11 @@ margin-top: 80px;
   margin-top: 20px;
 }
 
-.services-container-list-img img{
+.services-list-img img{
   margin: 0 auto;
 }
 
-.services-container-list-text {
+.services-list-text {
   font-size: 1.8rem;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -457,20 +474,22 @@ margin-top: 80px;
 	vertical-align: middle;
 }
 
-.services-container-list-arrow::before{
+.services-list-arrow::before{
 	left: 75px;
 	width: 32px;
 	height: 4px;
 	background: #1B56FD;
 	transform: rotate(45deg);
 }
-.services-container-list-arrow::after{
+
+.services-list-arrow::after{
 	left: 80px;
 	width: 25px;
 	height: 25px;
 	border-right: 4px solid #1B56FD;
 	border-bottom: 4px solid #1B56FD;
 }
+
 
 /* ここから院長あいさつ */
 .message {
@@ -513,89 +532,152 @@ margin-top: 80px;
   margin-top: 150px;
 }
 
-.header-logo {
+.footer-logo {
   text-align: center;
 }
 
-.header-logo img{
-  width: 340px;
-  height: 95px;
+.footer-logo img{
+  width: 370px;
+  height: 100px;
 }
 
 .footer-container {
-  margin: 40px 40px 30px 95px;
+  margin: 30px 40px 30px 40px;
+  display: flex;
+  gap: 65px;
 }
 
-.footer-container-left {
-
+.footer-left {
+  width: 50.2%;
 }
 
-.footer-container-left-address {
-  font-size: 2.2rem;
-  margin-top: 15px;
+.footer-addr {
+  font-size: 1.8rem;
 }
 
-.footer-container-left-access-info {
-  font-size: 2.2rem;
+.br-sp{
+  display: none;
 }
 
-.footer-container-left-tel {
-  font-size: 2.2rem;
-  font-weight: 700;
+.footer-tel {
+  font-size: 2.4rem;
+  color: #1B56FD;
   margin-top: 30px;
+}
+
+.flex-tel{
+  display: flex;
+  margin: 20px 0 0 0;
 }
 
 .tel-number{
-  font-size: 3.6rem;
-  font-weight: 500;
+  font-size: 2.6rem;
   line-height: 60px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
-.footer-container-left-reservation-btm {
-  margin-top: -70px;
-  margin-left: 400px;
+.footer-btm {
+  margin-left: auto;
+  cursor: pointer;
 }
 
-.footer-container-left-reservation-btm img{
-  width: 240px;
-  height: 72px;
+.footer-btm img{
+  width: 275px;
+  height: 70px;
+  margin-top: -15px;
 }
 
-.footer-container-left-information{
-  font-size: 2.8rem;
+.flex-information{
+  display: flex;
+  margin: 40px 0 0 0;
+}
+
+.footer-information{
+  font-size: 2.6rem;
   color: #1B56FD;
-  margin-top: 30px;
-
 }
-
-.footer-container-left-information img{
-
-}
-
 
 .closed-days{
+  font-size: 2.0rem;
   color: #000;
+  margin-left: auto;
+  margin-top: 20px;
 }
 
-.footer-container-right {
+.information-img{
+  margin-top: 20px;
+}
 
+.information-img img{
+}
+
+.footer-right {
+  width: 45.3%;
+  /* 右のiframe550px / 全体（左の表の617px+gap48px+右のiframe550px）1215px */
+}
+
+.footer-iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: calc(550 / 550 * 100%);
+}
+
+.footer-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .footer-nav {
-
+  background-color: #1B56FD66;/*  66 (40%透明度) */
+  margin-top: 40px;
+  text-align: center;
 }
 
 .footer-nav-category {
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 20px 60px 20px;
+  font-size: 2.0rem;
 }
 
-.footer-nav-item-list {
-
+.footer-column {
+  text-align: left;
+  min-width: 120px;
+  margin-top: 40px;
 }
 
-.footer-nav-item-list-text {
+.footer-column a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
 
+.footer-column ul {
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.footer-column ul li {
+  margin-top: 10px;
+}
+
+.footer-column ul li a {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-copy {
+  font-size: 1.8rem;
+  color: #333;
+  padding-bottom: 20px;
 }
 
 
@@ -606,9 +688,6 @@ margin-top: 80px;
   width: 60px;
 }
 
-.left-section {/* main */
-  width: calc(100% - 60px);
-}
  /* header nav */
 .header {
   font-size: 1.4rem;
@@ -649,81 +728,89 @@ margin-top: 80px;
   display: none;
 }
 
-.navigation {
+.nav {
   width: 330px;
   padding: 10px 30px 10px 30px;
 }
 
-.navigation-logo {
+.nav-logo {
   width: 150px;
 }
 
-.navigation-logo img{
+.nav-logo img{
 }
 
-.navigation-inner {
+.nav-inner {
   margin-top: 20px;
   max-width: 270px;
 }
 
-.navigation-button {
+.nav-button {
 }
 
-.navigation-button li {
+.nav-button li {
 }
 
-.navigation-button li a {
+.nav-button li a {
 }
 
-.navigation-button li a img{
+.nav-button li a img{
 }
 
-.navigation-list {
+.nav-list {
   margin-top: 15px;
 }
 
-.navigation-list-item {
+.nav-list-item {
   padding-left: 35px;
   padding-bottom: 8px;
 }
 
-.navigation-list-item:before {
+.nav-list-item:before {
   height: 2px;
 }
 
-.navigation-link {
+.nav-link {
   margin-top: 10px;
   font-size: 1.4rem;
 }
 
-.navigation-text {
+.nav-text {
   margin-top: 20px;
 }
 
-.navigation-address {
+.nav-addr {
   font-size: 1.2rem;
 }
 
-.navigation-address:not(:first-child) {
+.nav-addr:not(:first-child) {
   margin-top: 8px;
 }
 
 .color-red {
 }
 
-.nav-inner-menu-reservation img{
+.nav-reservation img{
   margin: 30px 5px 0 5px;
   width: 70%;
 }
 
-.nav-inner-access img{
+.nav-access img{
   margin: 30px 5px 0 5px;
   width: 70%;
 }
 
-.nav-inner-TOP img{
+.nav-TOP {
+
+}
+
+.nav-TOP img{
   margin: 30px 5px 0 5px;
   width: 70%;
+}
+
+.left-section {/* main */
+  width: calc(100% - 60px);
 }
 
 /* メインビジュアル */
@@ -737,7 +824,7 @@ margin-top: 80px;
   height: auto;
 }
 
-.main-address {
+.main-addr {
   font-size: 1.6rem;
 }
 
@@ -751,7 +838,7 @@ margin-top: 80px;
 }
 
 .main{
-  margin: 40px 25px 150px 25px;
+  margin: 40px 25px 0px 25px;
 }
 
 /* ここからお知らせ */
@@ -780,7 +867,7 @@ margin-top: 80px;
 }
 
 .news-list-text time{
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .news-list-text a{
@@ -804,7 +891,7 @@ margin-top: 80px;
 }
 
 .about-title {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
 }
 
 .br-sp{
@@ -833,16 +920,107 @@ margin-top: 80px;
 }
 
 /* ここから診療内容 */
+.services {
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 80px;
+}
+
+.services-text {
+  font-size: 1.4rem;
+  margin-top: 20px;
+
+}
+
+.services-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.services-list {
+  height: 260px;
+  border: 4px solid #1B56FD;
+  border-radius: 2px;
+  width: calc( 100% / 4 -  25px * 3 / 4 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+  min-width: 180px;
+}
+
+.services-list-title {
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+.services-list-img {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1B56FD66;/*  66 (40%透明度) */
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-list-img img{
+  margin: 0 auto;
+  width: 60%;
+}
+
+.services-list-text {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.arrow{
+	position: relative;
+	display: inline-block;
+	color: #1B56FD;
+}
+
+.arrow::before,
+.arrow::after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	content: "";
+	vertical-align: middle;
+}
+
+.services-list-arrow::before{
+	left: 60px;
+	width: 20px;
+	height: 3px;
+	background: #1B56FD;
+	transform: rotate(45deg);
+}
+.services-list-arrow::after{
+	left: 60px;
+	width: 20px;
+	height: 20px;
+	border-right: 3px solid #1B56FD;
+	border-bottom: 3px solid #1B56FD;
+}
+
 
 
 
 /* ここから院長あいさつ */
 .message {
-  margin-top: 50px;
 }
 
 .message-title {
   font-size: 2.4rem;
+  margin-top: 80px;
 }
 
 .message-img {
@@ -866,9 +1044,157 @@ margin-top: 80px;
   height: 55px;
 }
 
+/* ここからフッター */
+.footer {
+  margin-top: 100px;
+}
 
+.footer-logo {
+  text-align: center;
+}
 
+.footer-logo img{
+  width: 300px;
+  height: 80px;
+}
 
+.footer-container {
+  margin: 30px 25px 30px 25px;
+  display: flex;
+  gap: 50px;
+}
+
+.footer-left {
+  width: 50.2%;
+}
+
+.footer-addr {
+  font-size: 1.4rem;
+}
+
+.br-sp{
+  display: block;
+}
+
+.footer-tel {
+  font-size: 2.0rem;
+  margin-top: 20px;
+}
+
+.flex-tel{
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+.tel-number{
+  font-size: 2.4rem;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.footer-btm {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.footer-btm img{
+  width: 220px;
+  height: 55px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.flex-information{
+  display: flex;
+  margin: 20px 0 0 0;
+}
+
+.footer-information{
+  font-size: 2.2rem;
+}
+
+.closed-days{
+  font-size: 1.4rem;
+  color: #000;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.information-img{
+  margin-top: 15px;
+}
+
+.information-img img{
+}
+
+.footer-right {
+  width: 45.3%;
+  /* 右のiframe550px / 全体（左の表の617px+gap48px+右のiframe550px）1215px */
+}
+
+.footer-iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: calc(550 / 550 * 100%);
+}
+
+.footer-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.footer-nav {
+  background-color: #1B56FD66;/*  66 (40%透明度) */
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-nav-category {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.0rem 4.0rem;
+  margin: 30px 15px 50px 15px;
+  font-size: 1.8rem;
+}
+
+.footer-column {
+  text-align: left;
+  min-width: 120px;
+  margin-top: 30px;
+}
+
+.footer-column a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.footer-column ul {
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+.footer-column ul li {
+  margin-top: 10px;
+}
+
+.footer-column ul li a {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-copy {
+  font-size: 1.6rem;
+  color: #333;
+  padding-bottom: 20px;
+
+}
 }
 
 @media screen and (max-width: 767.9px) {
@@ -876,9 +1202,6 @@ margin-top: 80px;
   width: 40px;
 }
 
-.left-section {/* main */
-  width: calc(100% - 40px);
-}
 
  /* header nav*/
 .header {
@@ -923,84 +1246,90 @@ margin-top: 80px;
   display: none;
 }
 
-.navigation {
+.nav {
   width: 270px;
   padding: 8px 25px 8px 25px;
 }
 
-.navigation-logo {
+.nav-logo {
   width: 120px;
 }
 
-.navigation-logo img{
+.nav-logo img{
 }
 
-.navigation-inner {
+.nav-inner {
   margin-top: 20px;
   max-width: 270px;
 }
 
 
-.navigation-button {
+.nav-button {
 }
 
-.navigation-button li {
+.nav-button li {
 }
 
-.navigation-button li a {
+.nav-button li a {
 }
 
-.navigation-button li a img{
+.nav-button li a img{
 }
 
-.navigation-list {
+.nav-list {
   margin-top: 10px;
 }
 
-.navigation-list-item {
+.nav-list-item {
   padding-left: 25px;
   padding-bottom: 8px;
 }
 
-.navigation-list-item:before {
+.nav-list-item:before {
 }
 
-.navigation-link {
+.nav-link {
   margin-top: 10px;
   font-size: 1.2rem;
 }
 
-.navigation-text {
+.nav-text {
   margin-top: 20px;
 }
 
-.navigation-address {
+.nav-addr{
   font-size: 1.0rem;
 }
 
-.navigation-address:not(:first-child) {
+.nav-addr:not(:first-child) {
   margin-top: 8px;
 }
 
 .color-red {
 }
 
-.nav-inner-menu-reservation {
+.nav-reservation {
   display: none;
 }
 
-.nav-inner-access {
+.nav-access {
   display: none;
 }
 
-.nav-inner-TOP {
+.nav-TOP {
   font-size: 1.4rem;
   position: fixed;
   width: 40px;
+  bottom: 10px;
 }
 
-.nav-inner-TOP img{
+.nav-TOP img{
   width: 75%;
+
+}
+
+.left-section {/* main */
+  width: calc(100% - 40px);
 }
 
 /* メインビジュアル */
@@ -1016,7 +1345,7 @@ margin-top: 80px;
   margin-left: 5px;
 }
 
-.main-address {
+.main-addr {
   font-size: 1.2rem;
   margin-top: 5px;
   margin-left: 10px;
@@ -1035,7 +1364,7 @@ margin-top: 80px;
   margin-left: 10px;
 }
 .main{
-  margin: 20px 40px 100px 10px;
+  margin: 20px 20px 100px 20px;
 }
 
 /* ここからお知らせ */
@@ -1059,12 +1388,12 @@ margin-top: 80px;
 }
 
 .news-list-text:before {
-  left: 45%;
-  width: 80%;/*線の長さ*/
+  left: 52%;
+  width: 100%;
 }
 
 .news-list-text time{
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 .news-list-text a{
@@ -1084,11 +1413,12 @@ margin-top: 80px;
 
 /* ここからクリニック紹介  */
 .about {
-margin-top: 40px;
+
 }
 
 .about-title {
   font-size: 2.0rem;
+  margin-top: 60px;
 }
 
 .br-sp{
@@ -1096,20 +1426,22 @@ margin-top: 40px;
 }
 
 .about-img {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .about-img img{
   width: 50%;
+  margin: 0 auto;
 }
 
 .about-text {
   display: inline-block;
   text-align: left;
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .about-more {
@@ -1125,10 +1457,101 @@ margin-top: 40px;
 }
 
 /* ここから診療内容 */
+.services {
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.0rem;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.services-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+
+}
+
+.services-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.services-list {
+  height: 250px;
+  border: 4px solid #1B56FD;
+  border-radius: 2px;
+  width: calc( 100% / 4 -  25px * 3 / 4 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+  min-width: 180px;
+}
+
+.services-list-title {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.services-list-img {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1B56FD66;/*  66 (40%透明度) */
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-list-img img{
+  margin: 0 auto;
+  width: 60%;
+}
+
+.services-list-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.arrow{
+	position: relative;
+	display: inline-block;
+	color: #1B56FD;
+}
+
+.arrow::before,
+.arrow::after{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	content: "";
+	vertical-align: middle;
+}
+
+.services-list-arrow::before{
+	left: 60px;
+	width: 20px;
+	height: 3px;
+	background: #1B56FD;
+	transform: rotate(45deg);
+}
+.services-list-arrow::after{
+	left: 60px;
+	width: 20px;
+	height: 20px;
+	border-right: 3px solid #1B56FD;
+	border-bottom: 3px solid #1B56FD;
+}
+
 
 /* ここから院長あいさつ */
 .message {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .message-title {
@@ -1136,20 +1559,22 @@ margin-top: 40px;
 }
 
 .message-img {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .message-img img{
   width: 50%;
+  margin: 0 auto;
 }
 
 .message-text {
   display: inline-block;
   text-align: left;
   font-size: 1.2rem;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .message-more {
@@ -1161,7 +1586,159 @@ margin-top: 40px;
   height: 32px;
 }
 
+/* ここからフッター */
+.footer {
+  margin-top: 40px;
+}
 
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo img{
+  width: 240px;
+  height: 65px;
+}
+
+.footer-container {
+  margin: 20px 25px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-left {
+  width: 90%;
+  text-align: center;
+}
+
+.footer-addr {
+  font-size: 1.2rem;
+}
+
+.br-sp{
+  display: block;
+}
+
+.footer-tel {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.flex-tel{
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+.tel-number{
+  font-size: 2.0rem;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.footer-btm {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.footer-btm img{
+  width: 160px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.flex-information{
+  display: block;
+  margin: 40px 0 0 0;
+}
+
+.footer-information{
+  font-size: 2.0rem;
+  color: #1B56FD;
+}
+
+.closed-days{
+  font-size: 1.2rem;
+  color: #000;
+  text-align: right;
+}
+
+.information-img{
+  margin-top: 15px;
+}
+
+.information-img img{
+  width: 90%;
+}
+
+.footer-right {
+  width: 100%;
+}
+
+.footer-iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: calc(450 / 450 * 100%);
+}
+
+.footer-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.footer-nav {
+  background-color: #1B56FD66;/*  66 (40%透明度) */
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-nav-category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.0rem 1.0rem;
+  margin: 20px 15px 20px 15px;
+  font-size: 1.2rem;
+}
+
+.footer-column {
+  text-align: left;
+  min-width: 120px;
+  margin-top: 30px;
+}
+
+.footer-column a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.footer-column ul {
+  list-style: none;
+  font-size: 1.0rem;
+}
+
+.footer-column ul li {
+  margin-top: 10px;
+}
+
+.footer-column ul li a {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-copy {
+  font-size: 1.4rem;
+  color: #333;
+  padding-bottom: 20px;
+
+}
 }
 
 
