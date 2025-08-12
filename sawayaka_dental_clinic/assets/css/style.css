@@ -12,6 +12,8 @@ body {
   font-family: "Noto Sans JP", serif;
   line-height: 1.5;
   letter-spacing: 0.05rem;
+  max-width: 1440px;
+  margin: 0 auto 0 auto;
 }
 
 img {
@@ -211,24 +213,24 @@ li {
 }
 
 .nav-reservation img{
-  margin-top: 36px;
-  width: 90%;
+  margin-top: 35px;
+  width: 80%;
 }
 
 .nav-access {
 }
 
 .nav-access img{
-  margin-top: 36px;
-  width: 90%;
+  margin-top: 35px;
+  width: 80%;
 }
 
 .nav-TOP {
 }
 
 .nav-TOP img{
-  margin-top: 36px;
-  width: 90%;
+  margin-top: 35px;
+  width: 80%;
 }
 
 .left-section {/* main */
@@ -242,7 +244,7 @@ li {
 
 .mv {
   width: 100%;
-  z-index: 11;
+
 }
 
 .carousel-section {
@@ -264,38 +266,39 @@ li {
   background-image: url("background-img.png");
   background-size: contain;
   position: absolute;
-  width: 430px;
-  height: 400px;
+  width: 460px;
+  height: 350px;
   top: 0;
-  left: 0;
-  z-index: 12;
-  display: block;
 }
 
 .logo img{
-  display: block;
-  max-width: 100%;
-  margin-top: 10px;
-  margin-left: 10px;
+  max-width: 55%;
+  margin-top: 30px;
+  margin-left: 40px;
 }
 
 .main-addr {
   font-size: 2.0rem;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .main-tel {
   font-size: 2.0rem;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
+.main-reservation-btm {
+  width: 60%;
+  height: auto;
+}
+
+
 .main-reservation-btm img{
-  display: block;
   max-width: 100%;
   margin-top: 10px;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 .main{
@@ -311,31 +314,47 @@ li {
   font-weight: 700;
 }
 
+.news-wrap{
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.news-content {
+
+}
+
 .news-list {
   list-style: none;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 20px;
 }
 
 .news-list-text {
   font-size: 1.6rem;
   position: relative;
-  padding-left: 35px;
-  padding-bottom: 8px;
+  margin: 30px 0 10px 20px;
+  border-bottom: solid #1B56FD;
+/* 文字制限 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 500px; /* 省略表示する幅を指定 */
 }
 
-.news-list-text:before {
+/* .news-list-text:before {
   content: '';
   position: absolute;
   left: 38%;
-  bottom: 0;/*線の上下位置*/
+  bottom: 0; 線の上下位置
   display: inline-block;
-  width: 70%;/*線の長さ*/
-  height: 1px;/*線の太さ*/
-  transform: translateX(-50%);/*位置調整*/
-  background-color: #1B56FD;/*線の色*/
-  border-radius: 2px;/*線の丸み*/
-}
+  width: 70%; 線の長さ
+  height: 1px;線の太さ
+  transform: translateX(-50%);位置調整
+  background-color: #1B56FD;線の色
+  border-radius: 2px;線の丸み
+} */
+
 
 .news-list-text time{
   margin-right: 60px;
@@ -345,9 +364,12 @@ li {
   text-decoration: none;
 }
 
+.news-list-text p{
+  display: inline;
+}
+
 .news-more {
-  text-align: right;
-  margin-top: -65px;
+  align-self: flex-end;
 }
 
 .news-more a{
@@ -372,14 +394,21 @@ margin-top: 80px;
   display: block;
 }
 
-.about-img {
+.about-wrap{
   display: flex;
   margin-top: 60px;
 }
 
+.about-img {
+}
+
 .about-img img{
-  width: 50%;
+  width: 90%;
   border-radius: 2px;
+}
+
+.about-content{
+
 }
 
 .about-text {
@@ -389,12 +418,13 @@ margin-top: 80px;
 
 .about-more {
   text-align: right;
-  margin-top: -65px;
+
 }
 
 .about-more img{
   width: 240px;
   height: 72px;
+  margin-top: 50px;
 }
 
 /* ここから診療内容 */
@@ -420,6 +450,8 @@ margin-top: 80px;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 30px auto 0;
 }
 
 .services-list {
@@ -502,14 +534,21 @@ margin-top: 80px;
   margin-top: 100px;
 }
 
-.message-img {
+.message-wrap{
   display: flex;
   margin-top: 60px;
 }
 
+.message-img {
+}
+
 .message-img img{
-  width: 50%;
+  width: 90%;
   border-radius: 2px;
+}
+
+.message-content{
+
 }
 
 .message-text {
@@ -519,12 +558,12 @@ margin-top: 80px;
 
 .message-more {
   text-align: right;
-  margin-top: -65px;
 }
 
 .message-more img{
   width: 240px;
   height: 72px;
+  margin-top: 50px;
 }
 
 /* ここからフッター */
@@ -538,7 +577,7 @@ margin-top: 80px;
 
 .footer-logo img{
   width: 370px;
-  height: 100px;
+  height: auto;
 }
 
 .footer-container {
@@ -815,8 +854,8 @@ margin-top: 80px;
 
 /* メインビジュアル */
 .main-logo-area {
-  width: 290px;
-  height: 290px;
+  width: 350px;
+  height: 260px;
 }
 
 .logo img{
@@ -832,13 +871,16 @@ margin-top: 80px;
   font-size: 1.6rem;
 }
 
+.main-reservation-btm {
+  width: 50%;
+}
+
 .main-reservation-btm img{
-  width: 60%;
-  height: auto;
+
 }
 
 .main{
-  margin: 40px 25px 0px 25px;
+  margin: 40px 80px 0px 80px;
 }
 
 /* ここからお知らせ */
@@ -850,21 +892,29 @@ margin-top: 80px;
   margin-left: 20px;
 }
 
+.news-wrap{
+  margin-top: 10px;
+
+}
+
+.news-content {
+
+}
+
 .news-list {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .news-list-text {
   font-size: 1.4rem;
-  padding-left: 35px;
-  padding-bottom: 5px;
+  width: 300px;
 }
 
-.news-list-text:before {
+/* .news-list-text:before {
   left: 35%;
   width: 62%;
-}
+} */
 
 .news-list-text time{
   margin-right: 20px;
@@ -873,8 +923,12 @@ margin-top: 80px;
 .news-list-text a{
 }
 
+.news-list-text p{
+
+}
+
 .news-more {
-  margin-top: -50px;
+
 }
 
 .news-more a{
@@ -897,14 +951,20 @@ margin-top: 80px;
 .br-sp{
 }
 
-.about-img {
-  display: flex;
+.about-wrap{
   margin-top: 40px;
 }
 
+.about-img {
+
+}
+
 .about-img img{
-  width: 40%;
-  border-radius: 2px;
+
+}
+
+.about-content{
+
 }
 
 .about-text {
@@ -917,6 +977,7 @@ margin-top: 80px;
 .about-more img{
   width: 190px;
   height: 55px;
+  margin-top: 30px;
 }
 
 /* ここから診療内容 */
@@ -942,6 +1003,8 @@ margin-top: 80px;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto 0;
 }
 
 .services-list {
@@ -1011,9 +1074,6 @@ margin-top: 80px;
 	border-bottom: 3px solid #1B56FD;
 }
 
-
-
-
 /* ここから院長あいさつ */
 .message {
 }
@@ -1023,12 +1083,20 @@ margin-top: 80px;
   margin-top: 80px;
 }
 
-.message-img {
+.message-wrap{
   margin-top: 40px;
 }
 
+.message-img {
+
+}
+
 .message-img img{
-  width: 40%;
+  width: 80%;
+}
+
+.message-content{
+
 }
 
 .message-text {
@@ -1036,7 +1104,7 @@ margin-top: 80px;
 }
 
 .message-more {
-  margin-top: 0;
+
 }
 
 .message-more img{
@@ -1054,8 +1122,8 @@ margin-top: 80px;
 }
 
 .footer-logo img{
-  width: 300px;
-  height: 80px;
+  width: 250px;
+  height: auto;
 }
 
 .footer-container {
@@ -1193,13 +1261,22 @@ margin-top: 80px;
   font-size: 1.6rem;
   color: #333;
   padding-bottom: 20px;
+  text-align: center;
 
+}
+}
+
+/* 診療内容 */
+@media screen and (max-width: 1014.9px) {
+.services-container {
+  max-width: 585px;
+  gap: 40px;
 }
 }
 
 @media screen and (max-width: 767.9px) {
 .right-section { /* header-nav*/
-  width: 40px;
+  width: 60px;
 }
 
 
@@ -1210,8 +1287,8 @@ margin-top: 80px;
 }
 
 .hamburger-menu {
-  width: 40px;
-  height: 30px;
+  width: 55px;
+  height: 35px;
   background: #E9DFC366;
   border-radius: 10px;
   padding: 0;
@@ -1247,12 +1324,14 @@ margin-top: 80px;
 }
 
 .nav {
-  width: 270px;
-  padding: 8px 25px 8px 25px;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px 60px 10px 60px;
 }
 
 .nav-logo {
-  width: 120px;
+  width: 150px;
+  margin: 0 auto;
 }
 
 .nav-logo img{
@@ -1329,7 +1408,7 @@ margin-top: 80px;
 }
 
 .left-section {/* main */
-  width: calc(100% - 40px);
+  width: calc(100% - 0px);
 }
 
 /* メインビジュアル */
@@ -1341,30 +1420,31 @@ margin-top: 80px;
 .logo img{
   width: 70%;
   height: auto;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .main-addr {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .main-tel {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .main-reservation-btm img{
-  width: 50%;
+  width: 100%;
   height: auto;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
+
 .main{
-  margin: 20px 20px 100px 20px;
+  margin: 40px 40px 0px 40px;
 }
 
 /* ここからお知らせ */
@@ -1376,6 +1456,15 @@ margin-top: 80px;
   margin-left: 10px;
 }
 
+.news-wrap{
+  display: block;
+  margin-top: 0px;
+}
+
+.news-content {
+
+}
+
 .news-list {
   margin-top: 10px;
   margin-left: 10px;
@@ -1383,7 +1472,6 @@ margin-top: 80px;
 
 .news-list-text {
   font-size: 1.2rem;
-  padding-left: 25px;
   padding-bottom: 3px;
 }
 
@@ -1400,7 +1488,9 @@ margin-top: 80px;
 }
 
 .news-more {
-  margin-top: 10px;
+  text-align: end;
+  margin-top: 20px;
+
 }
 
 .news-more a{
@@ -1417,7 +1507,7 @@ margin-top: 80px;
 }
 
 .about-title {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   margin-top: 60px;
 }
 
@@ -1425,27 +1515,27 @@ margin-top: 80px;
   display: block;
 }
 
+.about-wrap{
+  display: block;
+  margin-top: 20px;
+}
+
 .about-img {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin-top: 20px;
 }
 
 .about-img img{
-  width: 50%;
-  margin: 0 auto;
+  width: 70%;
 }
 
 .about-text {
-  display: inline-block;
-  text-align: left;
   font-size: 1.2rem;
   margin-top: 20px;
 }
 
 .about-more {
-  margin-top: 10px;
+
 }
 
 .about-more a{
@@ -1454,6 +1544,7 @@ margin-top: 80px;
 .about-more img{
   width: 110px;
   height: 32px;
+  margin-top: 20px;
 }
 
 /* ここから診療内容 */
@@ -1462,48 +1553,45 @@ margin-top: 80px;
 }
 
 .services-title {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-top: 60px;
 }
 
 .services-text {
   font-size: 1.2rem;
-  margin-top: 20px;
+  margin-top: 15px;
 
 }
 
 .services-container {
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 425px;
 }
 
 .services-list {
-  height: 250px;
-  border: 4px solid #1B56FD;
+  height: 190px;
+  border: 3px solid #1B56FD;
   border-radius: 2px;
-  width: calc( 100% / 4 -  25px * 3 / 4 );
+  width: calc( 100% / 4 -  20px * 3 / 4 );
   /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
-  min-width: 180px;
+  min-width: 130px;
 }
 
 .services-list-title {
   font-size: 1.4rem;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .services-list-img {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #1B56FD66;/*  66 (40%透明度) */
   margin: 0 auto;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .services-list-img img{
@@ -1513,12 +1601,12 @@ margin-top: 80px;
 
 .services-list-text {
   font-size: 1.2rem;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .arrow{
 	position: relative;
-	display: inline-block;
+	display: flex;
 	color: #1B56FD;
 }
 
@@ -1534,14 +1622,16 @@ margin-top: 80px;
 }
 
 .services-list-arrow::before{
-	left: 60px;
+  top: 5px;
+	left: 90px;
 	width: 20px;
 	height: 3px;
 	background: #1B56FD;
 	transform: rotate(45deg);
 }
 .services-list-arrow::after{
-	left: 60px;
+  top: 5px;
+	left: 90px;
 	width: 20px;
 	height: 20px;
 	border-right: 3px solid #1B56FD;
@@ -1555,35 +1645,36 @@ margin-top: 80px;
 }
 
 .message-title {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
+}
+
+.message-wrap{
+  display: block;
+  margin-top: 20px;
 }
 
 .message-img {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin-top: 20px;
 }
 
 .message-img img{
-  width: 50%;
-  margin: 0 auto;
+  width: 70%;
 }
 
 .message-text {
-  display: inline-block;
-  text-align: left;
   font-size: 1.2rem;
   margin-top: 20px;
 }
 
 .message-more {
-  margin-top: 10px;
+
 }
 
 .message-more img{
   width: 110px;
   height: 32px;
+  margin-top: 20px;
 }
 
 /* ここからフッター */
@@ -1596,8 +1687,8 @@ margin-top: 80px;
 }
 
 .footer-logo img{
-  width: 240px;
-  height: 65px;
+  width: 150px;
+  height: auto;
 }
 
 .footer-container {
@@ -1621,7 +1712,7 @@ margin-top: 80px;
 }
 
 .footer-tel {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-top: 20px;
 }
 
@@ -1631,7 +1722,7 @@ margin-top: 80px;
 }
 
 .tel-number{
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   line-height: 30px;
   margin-left: 10px;
 }
@@ -1654,18 +1745,18 @@ margin-top: 80px;
 }
 
 .footer-information{
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   color: #1B56FD;
 }
 
 .closed-days{
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: #000;
   text-align: right;
 }
 
 .information-img{
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .information-img img{
@@ -1694,12 +1785,12 @@ margin-top: 80px;
 .footer-nav {
   background-color: #1B56FD66;/*  66 (40%透明度) */
   margin-top: 30px;
-  text-align: center;
+  text-align: start;
 }
 
 .footer-nav-category {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.0rem 1.0rem;
   margin: 20px 15px 20px 15px;
   font-size: 1.2rem;
@@ -1740,6 +1831,56 @@ margin-top: 80px;
 
 }
 }
+
+@media screen and (max-width: 519.9px) {
+
+.footer-column {
+  text-align: left;
+  min-width: 60px;
+  margin-top: 40px;
+}
+.footer-nav-category {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 449.9px) {
+.main-logo-area {
+  width: 120px;
+  height: 150px;
+}
+
+.logo img{
+  max-width: 60%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.main-addr {
+  display: none;
+}
+
+.main-tel {
+  font-size: 1.0rem;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.main-reservation-btm {
+  width: 55%;
+  height: auto;
+}
+
+
+.main-reservation-btm img{
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+}
+
+
+
 
 
 
