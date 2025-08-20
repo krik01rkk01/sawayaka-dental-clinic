@@ -238,29 +238,29 @@ li {
 }
 
 /* メインビジュアル */
-.main {
+.mv {
+  width: 100%;
+}
+
+.mv-img {
   position: relative;
 }
 
-.mv {
-  width: 100%;
-
-}
-
-.carousel-section {
-  width: 100%;
-  transition: width 0.3s ease; /* スムーズな変化 */
-}
-
-.main-visual{
+.mv-img img{
   width: 100%;
 }
 
-/* carouselドット位置 */
-.slick-dots  {
-  bottom: 10px!important;
+.mv-title {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding:0;
+  margin:0;
+  font-weight: bold;
+  color: #1B56FD;
+  font-size: 4.0rem;
 }
-
 
 .main-logo-area {
   background-image: url("background-img.png");
@@ -302,283 +302,368 @@ li {
 }
 
 .main{
-  margin: 40px 95px 0px 95px;
+  margin: 100px 90px 0px 90px;
 }
-
-/* ここからお知らせ */
-.news {
-}
-
-.news-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-.news-wrap{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  margin-left: 40px;
-  gap: 50px;
-  width: 100%;
-}
-
-.news-list {
-  list-style: none;
-  width: 70%;
-}
-
-.news-list-text {
-  font-size: 1.6rem;
-  /* position: relative; */
-  /* margin: 30px 0 10px 20px; */
-  border-bottom: solid #1B56FD;
-}
-
-.news-list-text:not(:first-child) {
-  margin-top: 30px;
-}
-
-/* .news-list-text:before {
-  content: '';
-  position: absolute;
-  left: 38%;
-  bottom: 0; 線の上下位置
-  display: inline-block;
-  width: 70%; 線の長さ
-  height: 1px;線の太さ
-  transform: translateX(-50%);位置調整
-  background-color: #1B56FD;線の色
-  border-radius: 2px;線の丸み
-} */
-
-.news-list-text a{
-  text-decoration: none;
-  padding: 10px;
-  display: flex;
-  gap: 60px;
-}
-
-.news-list-text time{
-  /* margin-right: 60px; */
-  display: block;
-}
-
-.news-list-text p{
-  /* 文字制限 */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* width: 500px; 省略表示する幅を指定 */
-}
-
-.news-more {
-  align-self: flex-end;
-}
-
-.news-more a{
-  width: 240px;
-  display: block;
-}
-
-.news-more img{
-  width: 100%;
-  height: auto;
-}
-
 
 /* ここからクリニック紹介  */
 .about {
-margin-top: 80px;
+
 }
 
 .about-title {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   text-align: center;
 }
 
-.br-sp{
-  display: block;
-}
-
-.about-wrap{
-  display: flex;
-  margin-top: 60px;
-  align-items: center;
-}
-
-.about-img {
-}
-
-.about-img img{
-  width: 90%;
-  border-radius: 2px;
-}
-
-.about-content{
-
+.br-sp {
+  display: none;
 }
 
 .about-text {
-  margin: 0 auto;
-  font-size: 1.8rem;
+  font-size: 2.0rem;
+  margin-top: 40px;
 }
 
 .about-more {
-  text-align: right;
+  margin-top: 70px;
 
 }
 
-.about-more img{
+.about-more ul {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  /* max-width: 1280px; */
+}
+
+.about-more img {
   width: 240px;
   height: auto;
-  margin-top: 50px;
 }
 
-/* ここから診療内容 */
-.services {
-  text-align: center;
-}
-
-.services-title {
-  font-size: 2.8rem;
+/* 当院で大切にしていること */
+.about-important {
+  font-size: 3.2rem;
   font-weight: 700;
   margin-top: 100px;
 }
 
-.services-text {
+.about-important ::before {
+  content: "●";
+  color: #1B56FD;
+  margin-right: 15px;
+}
+
+.about-container{
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  /* max-width: 1200px; */
+}
+
+.important-list {
+  /* height: 450px; */
+  width: calc( 100% / 3 -  50px * 2 / 3 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+  /* min-width: 300px; */
+}
+
+.important-list-title {
+  background: -moz-linear-gradient(#1B56FD66, #1B56FDCC);
+  background: -webkit-linear-gradient(#1B56FD66, #1B56FDCC);
+  background: linear-gradient(to right, #1B56FD66, #1B56FDCC);
+  border-radius: 2px;
   font-size: 1.8rem;
-  margin-top: 40px;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.br-sp2 {
+  display: none;
+}
+
+.important-list-text {
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
+.important-list-img {
+  margin-top: 25px;
+}
+
+.important-list-img img{
 
 }
 
-.services-container {
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  max-width: 1280px;
+/* 当院の特徴 */
+.features {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-top: 100px;
+}
+
+.slider-for {
+  width: 600px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.slider-for img{
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+  /* 矢印の色 */
+.slick-prev:before, .slick-next:before{
+  color: #1B56FD!important;
+}
+
+.slider-nav{
+  width: 600px;
   margin: 30px auto 0;
 }
 
-.services-list {
-  height: 310px;
-  border: 4px solid #1B56FD;
+.slider-nav .slick-slide {
+  margin: 0 5px; /* 左右に5pxの間隔 */
+}
+
+.slider-nav img {
+  width: 180px;
+  height: auto;
   border-radius: 2px;
-  width: calc( 100% / 4 -  25px * 3 / 4 );
-  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
-  min-width: 230px;
+  object-fit: cover;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-.services-list-title {
-  font-size: 2.0rem;
-  margin-top: 20px;
+.slider-nav .slick-current img {
+  opacity: 1;
+  border: 2px solid #1B56FD;
 }
 
-.services-list-img {
+
+
+.features-container {
   display: flex;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: #1B56FD66;/*  66 (40%透明度) */
-  margin: 0 auto;
-  align-items: center;
-  margin-top: 20px;
+  margin: 90px 60px 0 60px;
+  justify-content: center;
+  gap: 110px;
+
 }
 
-.services-list-img img{
-  margin: 0 auto;
+.features-list {
+  width: calc( 100% / 2 -  110px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
 }
 
-.services-list-text {
+.features-list-title {
+  background: -moz-linear-gradient(#1B56FD66, #1B56FDCC);
+  background: -webkit-linear-gradient(#1B56FD66, #1B56FDCC);
+  background: linear-gradient(to right, #1B56FD66, #1B56FDCC);
+  border-radius: 2px;
+  width: auto;
+  margin: 0 auto;
   font-size: 1.8rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.arrow{
-	position: relative;
-	display: inline-block;
-	color: #1B56FD;
-}
-
-.arrow::before,
-.arrow::after{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	content: "";
-	vertical-align: middle;
-}
-
-.services-list-arrow::before{
-	left: 75px;
-	width: 32px;
-	height: 4px;
-	background: #1B56FD;
-	transform: rotate(45deg);
-}
-
-.services-list-arrow::after{
-	left: 80px;
-	width: 25px;
-	height: 25px;
-	border-right: 4px solid #1B56FD;
-	border-bottom: 4px solid #1B56FD;
-}
-
-
-/* ここから院長あいさつ */
-.message {
-}
-
-.message-title {
-  font-size: 2.8rem;
-  font-weight: 700;
+  padding: 10px 45px;
   text-align: center;
+}
+
+.features-list-text {
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+
+.features-list-img {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.features-list-img img{
+  width: 350px;
+  height: auto;
+}
+
+/* 院長あいさつ */
+.message {
+  font-size: 3.2rem;
+  font-weight: 700;
   margin-top: 100px;
 }
 
-.message-wrap{
-  display: flex;
+.message ::before {
+  content: "●";
+  color: #1B56FD;
+  margin-right: 15px;
+}
+
+/* 松本院長 */
+.director-container {
   margin-top: 60px;
+}
+
+.director-list {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(27, 86, 253, 0.1);
+  border-radius: 10px;
+  padding: 25px 50px 25px 110px;
   align-items: center;
 }
 
-.message-img {
+.name {
+  width: calc( 100% / 2 -  20px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
 }
 
-.message-img img{
-  width: 90%;
+.director {
+  font-size: 2.2rem;
+}
+
+.director-name {
+  display: flex;
+}
+
+.name-ja {
+  font-size: 2.4rem;
+}
+
+.name-en {
+  font-size: 2.4rem;
+  margin-left: 40px;
+}
+
+.director-img {
+  width: calc( 100% / 2 -  20px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+}
+
+.director-img img{
+  width: 450px;
+  height: auto;
   border-radius: 2px;
 }
 
-.message-content{
-
+.director-message {
+  margin: 40px 100px 0 100px;
 }
 
-.message-text {
-  margin: 0 auto;
+.director-text {
   font-size: 1.8rem;
 }
 
-.message-more {
-  text-align: right;
+.director-career {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin-top: 40px;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  padding: 20px;
 }
 
-.message-more a{
-  width: 240px;
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
+.career-list {
+
 }
 
-.message-more img{
-  width: 100%;
+.career-title {
+  color: #1B56FD;
+  font-size: 2.0rem;
+}
+
+.career-text {
+  margin-top: 20px;
+}
+
+.career-detail {
+  font-size: 1.8rem;
+}
+
+/* 田中医師 */
+.dr-container {
+  margin-top: 100px;
+}
+
+.dr-list {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(27, 86, 253, 0.1);
+  border-radius: 10px;
+  padding: 25px 50px 25px 110px;
+  align-items: center;
+}
+
+.dr-name {
+  width: calc( 100% / 2 -  20px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+}
+
+.doctor {
+  font-size: 2.2rem;
+}
+
+.dr-names {
+  display: flex;
+}
+
+.dr-name-ja {
+  font-size: 2.4rem;
+}
+
+.dr-name-en {
+  font-size: 2.4rem;
+  margin-left: 40px;
+}
+
+.dr-img {
+  width: calc( 100% / 2 -  20px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+}
+
+.dr-img img{
+  width: 450px;
   height: auto;
+  border-radius: 2px;
+}
+
+.dr-message {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 30px 0 30px;
+}
+
+.dr-text {
+  font-size: 1.8rem;
+
+}
+
+.dr-career {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  padding: 20px;
+}
+
+.dr-career-list {
+
+}
+
+.dr-title {
+  color: #1B56FD;
+  font-size: 2.0rem;
+}
+
+.dr-text {
+  margin-top: 20px;
+}
+
+.dr-detail {
+  font-size: 2.0rem;
 }
 
 /* ここからフッター */
@@ -867,6 +952,9 @@ margin-top: 80px;
 }
 
 /* メインビジュアル */
+.mv-title {
+  font-size: 3.2rem;
+}
 .main-logo-area {
   width: 350px;
   height: 260px;
@@ -894,237 +982,323 @@ margin-top: 80px;
 }
 
 .main{
-  margin: 40px 80px 0px 80px;
-}
-
-/* ここからお知らせ */
-.news {
-}
-
-.news-title {
-  font-size: 1.6rem;
-  margin-left: 20px;
-}
-
-.news-wrap{
-  margin-top: 10px;
-
-}
-
-.news-content {
-
-}
-
-.news-list {
-  margin-top: 20px;
-  margin-left: 10px;
-}
-
-.news-list-text {
-  font-size: 1.4rem;
-  width: 300px;
-}
-
-/* .news-list-text:before {
-  left: 35%;
-  width: 62%;
-} */
-
-.news-list-text time{
-  margin-right: 20px;
-}
-
-.news-list-text a{
-}
-
-.news-list-text p{
-
-}
-
-.news-more {
-
-}
-
-.news-more a{
-}
-
-.news-more a img{
-  width: 190px;
-  height: 55px;
+  margin: 40px 60px 0px 60px;
 }
 
 /* ここからクリニック紹介  */
 .about {
-  margin-top: 50px;
+
 }
 
 .about-title {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 
 .br-sp{
-}
-
-.about-wrap{
-  margin-top: 40px;
-}
-
-.about-img {
-
-}
-
-.about-img img{
-
-}
-
-.about-content{
-
+  display: block;
 }
 
 .about-text {
   font-size: 1.4rem;
+  margin-top: 50px;
 }
 
 .about-more {
+  margin-top: 50px;
 }
 
-.about-more img{
-  width: 190px;
-  height: 55px;
-  margin-top: 30px;
+.about-more ul {
+  gap: 50px;
+  /* max-width: 1280px; */
 }
 
-/* ここから診療内容 */
-.services {
-  text-align: center;
+.about-more img {
+  width: 150px;
+  height: auto;
 }
 
-.services-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-top: 80px;
+/* 当院で大切にしていること */
+.about-important {
+  font-size: 2.2rem;
+  margin-top: 50px;
 }
 
-.services-text {
-  font-size: 1.4rem;
-  margin-top: 20px;
-
+.about-important ::before {
+  content: "●";
+  color: #1B56FD;
+  margin-right: 15px;
 }
 
-.services-container {
+.about-container{
   display: flex;
-  margin-top: 30px;
+  margin-top: 40px;
   justify-content: center;
-  gap: 25px;
+  gap: 40px;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 20px auto 0;
+  /* max-width: 1200px; */
 }
 
-.services-list {
-  height: 260px;
-  border: 4px solid #1B56FD;
-  border-radius: 2px;
-  width: calc( 100% / 4 -  25px * 3 / 4 );
+.important-list {
+  /* height: 450px; */
+  width: calc( 100% / 3 -  40px * 2 / 3 );
   /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
-  min-width: 180px;
+  /* min-width: 300px; */
 }
 
-.services-list-title {
+.important-list-title {
   font-size: 1.6rem;
-  margin-top: 20px;
+  padding: 10px 10px;
 }
 
-.services-list-img {
-  display: flex;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #1B56FD66;/*  66 (40%透明度) */
-  margin: 0 auto;
-  align-items: center;
-  margin-top: 20px;
+.br-sp2{
+  display: block;
 }
 
-.services-list-img img{
-  margin: 0 auto;
-  width: 60%;
-}
 
-.services-list-text {
+.important-list-text {
   font-size: 1.4rem;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.arrow{
-	position: relative;
-	display: inline-block;
-	color: #1B56FD;
+.important-lis-img {
+  margin-top: 30px;
 }
 
-.arrow::before,
-.arrow::after{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	content: "";
-	vertical-align: middle;
+.important-lis-img img{
+
 }
 
-.services-list-arrow::before{
-	left: 60px;
-	width: 20px;
-	height: 3px;
-	background: #1B56FD;
-	transform: rotate(45deg);
-}
-.services-list-arrow::after{
-	left: 60px;
-	width: 20px;
-	height: 20px;
-	border-right: 3px solid #1B56FD;
-	border-bottom: 3px solid #1B56FD;
+/* 当院の特徴 */
+.features {
+  font-size: 2.2rem;
+  margin-top: 50px;
 }
 
-/* ここから院長あいさつ */
-.message {
-}
-
-.message-title {
-  font-size: 2.4rem;
-  margin-top: 80px;
-}
-
-.message-wrap{
+.slider-for {
+  width: 400px;
+  margin: auto;
   margin-top: 40px;
 }
 
-.message-img {
+.slider-for img{
 
 }
 
-.message-img img{
-  width: 80%;
+.slider-nav{
+  width: 400px;
+  margin: 30px auto 0;
 }
 
-.message-content{
+.slider-nav .slick-slide {
+  margin: 0 5px; /* 左右に5pxの間隔 */
+}
+
+.slider-nav img {
+  width: 150px;
+  height: auto;
+}
+
+.slider-nav .slick-current img {
 
 }
 
-.message-text {
+.features-container {
+  display: flex;
+  margin: 40px 40px 0 40px;
+  gap: 50px;
+
+}
+
+.features-list {
+  width: calc( 100% / 2 -  50px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+}
+
+.features-list-title {
+  font-size: 1.6rem;
+  padding: 10px 10px;
+}
+
+.features-list-text {
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
+
+.features-list-img {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.features-list-img img{
+  width: 350px;
+  height: auto;
+}
+
+/* 院長あいさつ */
+.message {
+  font-size: 2.2rem;
+  margin-top: 50px;
+}
+
+.message ::before {
+  content: "●";
+  color: #1B56FD;
+  margin-right: 15px;
+}
+
+.director-container {
+  margin-top: 40px;
+}
+
+.director-list {
+  padding: 20px 35px 20px 70px;
+}
+
+.name {
+
+}
+
+.director {
   font-size: 1.4rem;
 }
 
-.message-more {
+.director-name {
+  display: flex;
+}
+
+.name-ja {
+  font-size: 1.6rem;
+}
+
+.name-en {
+  font-size: 1.6rem;
+  margin-left: 20px;
+}
+
+.director-img {
 
 }
 
-.message-more img{
-  width: 190px;
-  height: 55px;
+.director-img img{
+  width: 360px;
 }
+
+.director-message {
+  margin: 30px 30px 0 30px;
+}
+
+.director-text {
+  font-size: 1.4rem;
+}
+
+.director-career {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.0rem 2.0rem;
+  margin-top: 30px;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  padding: 20px;
+  place-items: center;
+}
+
+.career-list {
+  display: inline-block;
+  text-align: left;
+}
+
+.career-title{
+  color: #1B56FD;
+  font-size: 1.6rem;
+}
+
+.career-text {
+  margin-top: 10px;
+}
+
+.career-detail {
+  font-size: 1.4rem;
+}
+
+/* 田中医師 */
+.dr-container {
+  margin-top: 40px;
+}
+
+.dr-list {
+  padding: 20px 35px 20px 70px;
+}
+
+.dr-name {
+
+}
+
+.doctor {
+  font-size: 1.4rem;
+}
+
+.dr-names {
+  display: flex;
+}
+
+.dr-name-ja {
+  font-size: 1.6rem;
+}
+
+.dr-name-en {
+  font-size: 1.6rem;
+  margin-left: 20px;
+}
+
+.dr-img {
+
+}
+
+.dr-img img{
+  width: 360px;
+}
+
+.dr-message {
+  display: block;
+  margin: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.dr-text {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.dr-career {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.dr-career-list {
+
+}
+
+.dr-title {
+  color: #1B56FD;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.dr-text {
+  margin-top: 10px;
+}
+
+.dr-detail {
+  font-size: 1.4rem;
+}
+
+
 
 /* ここからフッター */
 .footer {
@@ -1280,19 +1454,45 @@ margin-top: 80px;
 }
 }
 
-/* 診療内容 */
-@media screen and (max-width: 1014.9px) {
-.services-container {
-  max-width: 585px;
-  gap: 40px;
+/* メインビジュアル */
+@media screen and (max-width: 1099.9px) {
+.main-logo-area {
+  width: 280px;
+  height: 170px;
 }
+
+.logo img{
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.main-addr {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.main-tel {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.main-reservation-btm img{
+  width: 80%;
+  height: auto;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
 }
 
 @media screen and (max-width: 767.9px) {
 .right-section { /* header-nav*/
   width: 60px;
 }
-
 
  /* header nav*/
 .header {
@@ -1426,6 +1626,9 @@ margin-top: 80px;
 }
 
 /* メインビジュアル */
+.mv-title {
+  font-size: 2.0rem;
+}
 .main-logo-area {
   width: 175px;
   height: 175px;
@@ -1461,60 +1664,6 @@ margin-top: 80px;
   margin: 40px 40px 0px 40px;
 }
 
-/* ここからお知らせ */
-.news {
-}
-
-.news-title {
-  font-size: 1.4rem;
-  margin-left: 10px;
-}
-
-.news-wrap{
-  display: block;
-  margin-top: 0px;
-}
-
-.news-content {
-
-}
-
-.news-list {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.news-list-text {
-  font-size: 1.2rem;
-  padding-bottom: 3px;
-}
-
-.news-list-text:before {
-  left: 52%;
-  width: 100%;
-}
-
-.news-list-text time{
-  margin-right: 10px;
-}
-
-.news-list-text a{
-}
-
-.news-more {
-  text-align: end;
-  margin-top: 20px;
-
-}
-
-.news-more a{
-}
-
-.news-more a img{
-  width: 110px;
-  height: 32px;
-}
-
 /* ここからクリニック紹介  */
 .about {
 
@@ -1522,44 +1671,335 @@ margin-top: 80px;
 
 .about-title {
   font-size: 1.8rem;
-  margin-top: 60px;
 }
 
 .br-sp{
   display: block;
 }
 
-.about-wrap{
-  display: block;
-  margin-top: 20px;
-}
-
-.about-img {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.about-img img{
-  width: 70%;
-}
-
 .about-text {
   font-size: 1.2rem;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .about-more {
-
+  margin-top: 30px;
 }
 
-.about-more a{
+.about-more ul {
+  gap: 30px;
+  /* max-width: 1280px; */
 }
 
-.about-more img{
+.about-more img {
   width: 110px;
-  height: 32px;
+  height: auto;
+}
+
+.about-important {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.about-important ::before {
+  content: "●";
+  color: #1B56FD;
+  margin-right: 15px;
+}
+
+.about-container{
+  display: block;
+  text-align: center;
+  margin-top: 0px;
+  /* gap: 40px;
+  flex-wrap: wrap; */
+  /* max-width: 1200px; */
+}
+
+.important-list {
+  /* height: 450px; */
+  /* width: calc( 100% / 3 -  40px * 2 / 3 ); */
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+  /* min-width: 300px; */
+  width: 100%;
   margin-top: 20px;
 }
+
+.important-list-title {
+  font-size: 1.4rem;
+  padding: 10px 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.br-sp2{
+  display: none;
+}
+
+
+.important-list-text {
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.important-list-img {
+  margin-top: 20px;
+}
+
+.important-list-img img{
+  width: 300px;
+  height: auto;
+}
+
+
+/* 当院の特徴 */
+.features {
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
+
+.slider-for {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.slider-for img{
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.slider-nav{
+  width: 400px;
+  margin: 30px auto 0;
+}
+
+.slider-nav .slick-slide {
+  margin: 0 5px; /* 左右に5pxの間隔 */
+}
+
+.slider-nav img {
+  width: 150px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.slider-nav .slick-current img {
+  opacity: 1;
+  border: 2px solid #1B56FD;
+}
+
+.features-container {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+.features-list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.features-list-title {
+  font-size: 1.4rem;
+  padding: 10px 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.features-list-text {
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.features-list-img {
+  margin-top: 20px;
+}
+
+.features-list-img img{
+  width: 300px;
+  height: auto;
+}
+
+/* 院長あいさつ */
+.message {
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
+
+.message ::before {
+  content: "●";
+  color: #1B56FD;
+  margin-right: 15px;
+}
+
+.director-container {
+  margin-top: 20px;
+}
+
+.director-list {
+  gap: 10px;
+  padding: 15px 30px 15px 60px;
+}
+
+.name {
+  width: calc( 100% / 2 -  10px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+}
+
+.director {
+  font-size: 1.2rem;
+}
+
+.director-name {
+  display: block;
+}
+
+.name-ja {
+  font-size: 1.4rem;
+}
+
+.name-en {
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+.director-img {
+  width: calc( 100% / 2 -  10px * 1 / 2 );
+  /* （100% / カード枚数 - 余白の幅 * 余白の数 / カード枚数 ) */
+}
+
+.director-img img{
+  width: 250px;
+  height: auto;
+}
+
+.director-message {
+  margin: 30px 30px 0 30px;
+}
+
+.director-text {
+  font-size: 1.2rem;
+}
+
+.director-career {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.0rem 1.0rem;
+  margin-top: 20px;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  padding: 10px;
+  place-items: center;
+}
+
+.career-list {
+  display: inline-block;
+  text-align: left;
+}
+
+.career-title{
+  font-size: 1.4rem;
+}
+
+.career-text {
+  margin-top: 10px;
+}
+
+.career-detail {
+  font-size: 1.2rem;
+}
+
+/* 田中医師 */
+.dr-container {
+  margin-top: 20px;
+}
+
+.dr-list {
+  padding: 15px 30px 15px 60px;
+}
+
+.dr-name {
+
+}
+
+.doctor {
+  font-size: 1.2rem;
+}
+
+.dr-names {
+  display: block;
+}
+
+.dr-name-ja {
+  font-size: 1.4rem;
+}
+
+.dr-name-en {
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+.dr-img {
+
+}
+
+.dr-img img{
+  width: 250px;
+}
+
+.dr-message {
+  display: block;
+  margin: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.dr-text {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.dr-career {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.dr-career-list {
+
+}
+
+.dr-title {
+  color: #1B56FD;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.dr-text {
+  margin-top: 10px;
+}
+
+.dr-detail {
+  font-size: 1.2rem;
+}
+
+
+
 
 /* ここから診療内容 */
 .services {
@@ -1848,6 +2288,54 @@ margin-top: 80px;
 
 @media screen and (max-width: 519.9px) {
 
+/* 院長あいさつ */
+.director-career {
+  display: block;
+  margin-top: 20px;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  place-items: center;
+  padding: 0 0 20px 0;
+}
+
+.career-list {
+  display: block;
+  text-align: center;
+}
+
+.career-title{
+  margin-top: 20px;
+}
+
+.career-text {
+  margin-top: 0px;
+}
+
+/* 田中医師 */
+.dr-career {
+  display: block;
+  margin-top: 20px;
+  border-top: 2px solid #1B56FD50;;
+  border-bottom: 2px solid #1B56FD50;;
+  place-items: center;
+  padding: 0 0 20px 0;
+}
+
+.dr-career-list {
+  display: block;
+  text-align: center;
+}
+
+.dr-title {
+  margin-top: 20px;
+}
+
+.dr-text {
+  margin-top: 0px;
+}
+
+
+/* フッター */
 .footer-column {
   text-align: left;
   min-width: 60px;
